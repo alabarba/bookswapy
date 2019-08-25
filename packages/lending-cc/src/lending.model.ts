@@ -6,7 +6,6 @@ import {
   Required,
   Validate
 } from '@worldsibu/convector-core-model';
-import { Participant } from 'participant-cc';
 
 export class Lending extends ConvectorModel<Lending> {
   @ReadOnly()

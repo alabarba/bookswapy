@@ -30,11 +30,10 @@ export class LendingController extends ConvectorController {
   ) {
     let book = new Lending(isbn);
     book.isbn=isbn;
-    book.name = title;
-    book.isbn=author;
-    book.name = publisher;
-    book.isbn=genre;
-    book.name = year;
+    book.title = title;
+    book.publisher = publisher;
+    book.genre=genre;
+    book.year = year;
     book.ownerId = ownerId;
     book.borrowerId=null;
     await book.save();
@@ -73,14 +72,14 @@ export class LendingController extends ConvectorController {
     if (ownerCurrentIdentity.fingerprint === this.sender) {
       console.log('Identity can update book');
       book.isbn=isbn;
-      book.name = title;
-      book.isbn=author;
-      book.name = publisher;
-      book.isbn=genre;
-      book.name = year;
+      book.title = title;
+      book.author=author;
+      book.publisher = publisher;
+      book.genre=genre;
+      book.year = year;
       await book.save();
     } else {
-      throw new Error(`Identity ${this.sender} is not allowed to update book just ${owner.name} ${ownerCurrentIdentity.fingerprint} can`);
+      throw new Error(`Identity ${this.sender} is not allowed to update book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
     }
   }
 
@@ -107,7 +106,7 @@ export class LendingController extends ConvectorController {
       book.borrowerId = borrowerId;
       await book.save();
     } else {
-      throw new Error(`Identity ${this.sender} is not allowed to update book just ${owner.name} ${ownerCurrentIdentity.fingerprint} can`);
+      throw new Error(`Identity ${this.sender} is not allowed to update book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
     }
   }
 
