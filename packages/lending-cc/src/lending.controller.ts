@@ -14,9 +14,7 @@ export class LendingController extends ConvectorController {
   @Invokable()
   public async createBook(
     @Param(yup.string())
-    lenderId: string,
-    @Param(yup.string())
-    borrowerId: string,
+    ownerId: string,
     @Param(yup.string())
     isbn: string,
     @Param(yup.string())
@@ -37,8 +35,8 @@ export class LendingController extends ConvectorController {
     book.name = publisher;
     book.isbn=genre;
     book.name = year;
-    book.lenderId = lenderId;
-    book.borrowerId=borrowerId;
+    book.ownerId = ownerId;
+    book.borrowerId=null;
     await book.save();
   }
 
@@ -63,9 +61,9 @@ export class LendingController extends ConvectorController {
     if (!book || !book.isbn) {
       throw new Error(`Book with isbn ${isbn} does not exist`);
     }
-    const owner = await Participant.getOne(username);
+    const owner = await Participant.getOne(book.ownerId);
     console.log('Owner:');
-    console.log(owner.username);
+    console.log(owner);
 
     if (!owner || !owner.id || !owner.identities) {
       throw new Error('Referenced owner participant does not exist in the ledger');
@@ -98,7 +96,7 @@ export class LendingController extends ConvectorController {
     if (!book || book.isbn) {
       throw new Error(`Book with id ${isbn} does not exist`);
     }
-    const owner = await Participant.getOne(book.lenderId);
+    const owner = await Participant.getOne(book.ownerId);
 
     if (!owner || !owner.id || !owner.identities) {
       throw new Error('Referenced owner participant does not exist in the ledger');

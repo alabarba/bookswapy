@@ -6,6 +6,7 @@ import {
   Required,
   Validate
 } from '@worldsibu/convector-core-model';
+import { Participant } from 'participant-cc';
 
 export class Lending extends ConvectorModel<Lending> {
   @ReadOnly()
@@ -27,7 +28,7 @@ export class Lending extends ConvectorModel<Lending> {
   @Validate(yup.string())
   public year: string;
   @Validate(yup.string())
-  public lenderId: string;
+  public ownerId: string;
   @Validate(yup.string())
   public borrowerId: string;
   
