@@ -1464,3 +1464,15 @@ Error: could not assemble transaction, err proposal response was not successful,
 [OUTPUT OF THE COMMAND:uname -a]
 
 Linux antonio-VirtualBox 4.15.0-45-generic #48~16.04.1-Ubuntu SMP Tue Jan 29 18:03:48 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+
+------------------------------
+------------------------------
+[NODE AND NPM VERSION]
+
+blockchain@antonio-VirtualBox:~/bookswapy$ node --version
+v8.11.4
+blockchain@antonio-VirtualBox:~/bookswapy$ 
+blockchain@antonio-VirtualBox:~/bookswapy$ npm --version
+5.6.0
+blockchain@antonio-VirtualBox:~/bookswapy$
