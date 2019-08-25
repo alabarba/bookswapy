@@ -1,0 +1,1466 @@
+
+------------------------------
+------------------------------
+[OUTPUT OF THE COMMAND:npm run env:restart]
+
+> bookswapy@0.1.0 env:restart /home/blockchain/bookswapy
+> hurl new
+
+[hurley] - Hurley collects anonymous usage statistics to improve the tool over time
+[hurley] - About to create binaries
+[hurley] - Created and saved binaries
+[hurley] - About to run binaries
+Installing Hyperledger Fabric binaries
+Binaries exist already
+Checking IMAGES
+===> Pulling fabric Images
+==> FABRIC IMAGE: peer
+
+1.4.0: Pulling from hyperledger/fabric-peer
+Digest: sha256:9707c97f787de1d4d6dd60994d6b8ea2e5cc28b0f42e6849df3fb41c64b41372
+Status: Image is up to date for hyperledger/fabric-peer:1.4.0
+==> FABRIC IMAGE: orderer
+
+1.4.0: Pulling from hyperledger/fabric-orderer
+Digest: sha256:644265186b4887c7d9dcb91895124ccead3c0125c2c4f9eadc421dc9555d7495
+Status: Image is up to date for hyperledger/fabric-orderer:1.4.0
+==> FABRIC IMAGE: tools
+
+1.4.0: Pulling from hyperledger/fabric-tools
+Digest: sha256:aee256916d0cb938d8023fa32ed2745991d32cfe79018e360f1720707ebfbdb5
+Status: Image is up to date for hyperledger/fabric-tools:1.4.0
+===> Pulling fabric ca Image
+==> FABRIC CA IMAGE
+
+1.4.0: Pulling from hyperledger/fabric-ca
+Digest: sha256:c1dce534d9e9202697e0aaad7c5521d958700fda0b05127dafb9333c22e15f74
+Status: Image is up to date for hyperledger/fabric-ca:1.4.0
+===> Pulling thirdparty docker images
+==> THIRDPARTY DOCKER IMAGE: couchdb
+
+0.4.14: Pulling from hyperledger/fabric-couchdb
+Digest: sha256:021c7e4a5047432d892fbdf7d5220d3049ff4e8b436fd481bb08e41871f1aac7
+Status: Image is up to date for hyperledger/fabric-couchdb:0.4.14
+
+===> List out hyperledger docker images
+hyperledger/fabric-ca                                                                                   1.4.2               f289675c9874        5 weeks ago         253MB
+hyperledger/fabric-zookeeper                                                                            0.4.15              20c6045930c8        5 months ago        1.43GB
+hyperledger/fabric-zookeeper                                                                            latest              20c6045930c8        5 months ago        1.43GB
+hyperledger/fabric-kafka                                                                                0.4.15              b4ab82bbaf2f        5 months ago        1.44GB
+hyperledger/fabric-kafka                                                                                latest              b4ab82bbaf2f        5 months ago        1.44GB
+hyperledger/fabric-couchdb                                                                              0.4.15              8de128a55539        5 months ago        1.5GB
+hyperledger/fabric-javaenv                                                                              1.4.0               3d91b3bf7118        7 months ago        1.75GB
+hyperledger/fabric-javaenv                                                                              latest              3d91b3bf7118        7 months ago        1.75GB
+hyperledger/fabric-tools                                                                                1.4.0               0a44f4261a55        7 months ago        1.56GB
+hyperledger/fabric-tools                                                                                latest              0a44f4261a55        7 months ago        1.56GB
+hyperledger/fabric-ccenv                                                                                1.4.0               5b31d55f5f3a        7 months ago        1.43GB
+hyperledger/fabric-ccenv                                                                                latest              5b31d55f5f3a        7 months ago        1.43GB
+hyperledger/fabric-orderer                                                                              1.4.0               54f372205580        7 months ago        150MB
+hyperledger/fabric-orderer                                                                              latest              54f372205580        7 months ago        150MB
+hyperledger/fabric-peer                                                                                 1.4.0               304fac59b501        7 months ago        157MB
+hyperledger/fabric-peer                                                                                 latest              304fac59b501        7 months ago        157MB
+hyperledger/fabric-ca                                                                                   1.4.0               1a804ab74f58        7 months ago        244MB
+hyperledger/fabric-ca                                                                                   latest              1a804ab74f58        7 months ago        244MB
+hyperledger/fabric-couchdb                                                                              0.4.14              f14f97292b4c        10 months ago       1.5GB
+hyperledger/fabric-couchdb                                                                              latest              f14f97292b4c        10 months ago       1.5GB
+hyperledger/fabric-baseimage                                                                            amd64-0.4.14        8c01cc0574ab        10 months ago       1.39GB
+[hurley] - Ran binaries
+[hurley] - About to create configtxyaml
+[hurley] - Created and saved configtxyaml
+[hurley] - About to create cryptoconfigyaml
+[hurley] - Created and saved cryptoconfigyaml
+[hurley] - About to create cryptoconfigsh
+[hurley] - Created and saved cryptoconfigsh
+[hurley] - Running cryptoconfigsh
+org1.hurley.lab
+org2.hurley.lab
+[33m2019-08-25 18:56:10.308 CEST [common.tools.configtxgen] main -> WARN 001[0m Omitting the channel ID for configtxgen for output operations is deprecated.  Explicitly passing the channel ID will be required in the future, defaulting to 'testchainid'.
+[34m2019-08-25 18:56:10.316 CEST [common.tools.configtxgen] main -> INFO 002[0m Loading configuration
+[34m2019-08-25 18:56:11.004 CEST [common.tools.configtxgen.localconfig] completeInitialization -> INFO 003[0m orderer type: solo
+[34m2019-08-25 18:56:11.009 CEST [common.tools.configtxgen.localconfig] Load -> INFO 004[0m Loaded configuration: /home/blockchain/hyperledger-fabric-network/configtx.yaml
+[34m2019-08-25 18:56:11.106 CEST [common.tools.configtxgen.localconfig] completeInitialization -> INFO 005[0m orderer type: solo
+[34m2019-08-25 18:56:11.116 CEST [common.tools.configtxgen.localconfig] LoadTopLevel -> INFO 006[0m Loaded configuration: /home/blockchain/hyperledger-fabric-network/configtx.yaml
+[33m2019-08-25 18:56:11.120 CEST [common.tools.configtxgen.encoder] NewChannelGroup -> WARN 007[0m Default policy emission is deprecated, please include policy specifications for the channel group in configtx.yaml
+[33m2019-08-25 18:56:11.135 CEST [common.tools.configtxgen.encoder] NewOrdererGroup -> WARN 008[0m Default policy emission is deprecated, please include policy specifications for the orderer group in configtx.yaml
+[33m2019-08-25 18:56:11.153 CEST [common.tools.configtxgen.encoder] NewOrdererOrgGroup -> WARN 009[0m Default policy emission is deprecated, please include policy specifications for the orderer org group OrdererOrg in configtx.yaml
+[33m2019-08-25 18:56:11.157 CEST [common.tools.configtxgen.encoder] NewOrdererOrgGroup -> WARN 00a[0m Default policy emission is deprecated, please include policy specifications for the orderer org group org1MSP in configtx.yaml
+[33m2019-08-25 18:56:11.168 CEST [common.tools.configtxgen.encoder] NewOrdererOrgGroup -> WARN 00b[0m Default policy emission is deprecated, please include policy specifications for the orderer org group org2MSP in configtx.yaml
+[34m2019-08-25 18:56:11.180 CEST [common.tools.configtxgen] doOutputBlock -> INFO 00c[0m Generating genesis block
+[34m2019-08-25 18:56:11.188 CEST [common.tools.configtxgen] doOutputBlock -> INFO 00d[0m Writing genesis block
+[34m2019-08-25 18:56:11.553 CEST [common.tools.configtxgen] main -> INFO 001[0m Loading configuration
+[34m2019-08-25 18:56:11.620 CEST [common.tools.configtxgen.localconfig] Load -> INFO 002[0m Loaded configuration: /home/blockchain/hyperledger-fabric-network/configtx.yaml
+[34m2019-08-25 18:56:11.681 CEST [common.tools.configtxgen.localconfig] completeInitialization -> INFO 003[0m orderer type: solo
+[34m2019-08-25 18:56:11.690 CEST [common.tools.configtxgen.localconfig] LoadTopLevel -> INFO 004[0m Loaded configuration: /home/blockchain/hyperledger-fabric-network/configtx.yaml
+[34m2019-08-25 18:56:11.694 CEST [common.tools.configtxgen] doOutputChannelCreateTx -> INFO 005[0m Generating new channel configtx
+[33m2019-08-25 18:56:11.697 CEST [common.tools.configtxgen.encoder] NewApplicationGroup -> WARN 006[0m Default policy emission is deprecated, please include policy specifications for the application group in configtx.yaml
+[33m2019-08-25 18:56:11.732 CEST [common.tools.configtxgen.encoder] NewApplicationOrgGroup -> WARN 007[0m Default policy emission is deprecated, please include policy specifications for the application org group org1MSP in configtx.yaml
+[33m2019-08-25 18:56:11.739 CEST [common.tools.configtxgen.encoder] NewApplicationOrgGroup -> WARN 008[0m Default policy emission is deprecated, please include policy specifications for the application org group org2MSP in configtx.yaml
+[34m2019-08-25 18:56:11.745 CEST [common.tools.configtxgen] doOutputChannelCreateTx -> INFO 009[0m Writing new channel tx
+[34m2019-08-25 18:56:12.298 CEST [common.tools.configtxgen] main -> INFO 001[0m Loading configuration
+[34m2019-08-25 18:56:12.405 CEST [common.tools.configtxgen.localconfig] Load -> INFO 002[0m Loaded configuration: /home/blockchain/hyperledger-fabric-network/configtx.yaml
+[34m2019-08-25 18:56:12.456 CEST [common.tools.configtxgen.localconfig] completeInitialization -> INFO 003[0m orderer type: solo
+[34m2019-08-25 18:56:12.467 CEST [common.tools.configtxgen.localconfig] LoadTopLevel -> INFO 004[0m Loaded configuration: /home/blockchain/hyperledger-fabric-network/configtx.yaml
+[34m2019-08-25 18:56:12.472 CEST [common.tools.configtxgen] doOutputAnchorPeersUpdate -> INFO 005[0m Generating anchor peer update
+[34m2019-08-25 18:56:12.484 CEST [common.tools.configtxgen] doOutputAnchorPeersUpdate -> INFO 006[0m Writing anchor peer update
+[34m2019-08-25 18:56:13.065 CEST [common.tools.configtxgen] main -> INFO 001[0m Loading configuration
+[34m2019-08-25 18:56:13.146 CEST [common.tools.configtxgen.localconfig] Load -> INFO 002[0m Loaded configuration: /home/blockchain/hyperledger-fabric-network/configtx.yaml
+[34m2019-08-25 18:56:13.303 CEST [common.tools.configtxgen.localconfig] completeInitialization -> INFO 003[0m orderer type: solo
+[34m2019-08-25 18:56:13.313 CEST [common.tools.configtxgen.localconfig] LoadTopLevel -> INFO 004[0m Loaded configuration: /home/blockchain/hyperledger-fabric-network/configtx.yaml
+[34m2019-08-25 18:56:13.317 CEST [common.tools.configtxgen] doOutputAnchorPeersUpdate -> INFO 005[0m Generating anchor peer update
+[34m2019-08-25 18:56:13.320 CEST [common.tools.configtxgen] doOutputAnchorPeersUpdate -> INFO 006[0m Writing anchor peer update
+[hurley] - Ran cryptoconfigsh
+[hurley] - Building compose
+[hurley] - Builded compose
+[hurley] - Saving compose
+[hurley] - Saved compose
+[hurley] - Creating network profiles
+[hurley] - Cleaning .hfc-org1
+[hurley] - Cleaning .hfc-org2
+[hurley] - Creating for org1
+[hurley] - Creating for org2
+[hurley] - Creating for org1 inside Docker
+[hurley] - Creating for org2 inside Docker
+[hurley] - Created network profiles
+[hurley] - Creating network restart script
+[hurley] - Saved network restart script
+[hurley] - Running network restart script
+6a042035ec9d
+11108a52a054
+06b214752a91
+c37f039f6873
+59c069ee7e39
+4cdfa4d1a60b
+2ba020d88185
+6a042035ec9d
+11108a52a054
+06b214752a91
+c37f039f6873
+59c069ee7e39
+4cdfa4d1a60b
+2ba020d88185
+3557ae54158d
+Untagged: dev-peer0.org1.hurley.lab-person-1.0-327a0dd6d92274526a6230611433ce88bc56a5602b3f6036cd5f739662e1d1f5:latest
+Deleted: sha256:fc2beb1d7fc12212c9847f0036316313012f9b49bd2eea3847e44598521ba282
+Deleted: sha256:47057779b9cd6fe989dd5ab2b8f08203f20e8a1562c7fc2dcbc58f7a4739e817
+Deleted: sha256:215309a86dc220cba68d57c962b8653b0e0fbd16c7bb71ec71e98694ed386e13
+Deleted: sha256:4877f83c9476e1c9332914673038eee8580f00d522a6273a10fae966e0c06a1c
+Creating ca.org2.hurley.lab
+Creating couchdb.peer0.org1.hurley.lab
+Creating couchdb.peer0.org2.hurley.lab
+Creating orderer.hurley.lab
+Creating ca.org1.hurley.lab
+Creating peer0.org2.hurley.lab
+Creating peer0.org1.hurley.lab
+Creating ch1 channel block in peer peer0.org1.hurley.lab
+[33m2019-08-25 16:57:40.846 UTC [main] InitCmd -> WARN 001[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:57:40.863 UTC [viperutil] getKeysRecursively -> DEBU 002[0m Found map[string]interface{} value for peer.BCCSP
+[36m2019-08-25 16:57:40.883 UTC [viperutil] unmarshalJSON -> DEBU 003[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:57:40.884 UTC [viperutil] getKeysRecursively -> DEBU 004[0m Found real value for peer.BCCSP.Default setting to string SW
+[36m2019-08-25 16:57:40.884 UTC [viperutil] getKeysRecursively -> DEBU 005[0m Found map[string]interface{} value for peer.BCCSP.SW
+[36m2019-08-25 16:57:40.885 UTC [viperutil] unmarshalJSON -> DEBU 006[0m Unmarshal JSON: value is not a string: 256
+[36m2019-08-25 16:57:40.885 UTC [viperutil] getKeysRecursively -> DEBU 007[0m Found real value for peer.BCCSP.SW.Security setting to int 256
+[36m2019-08-25 16:57:40.885 UTC [viperutil] getKeysRecursively -> DEBU 008[0m Found map[string]interface{} value for peer.BCCSP.SW.FileKeyStore
+[36m2019-08-25 16:57:40.914 UTC [viperutil] unmarshalJSON -> DEBU 009[0m Unmarshal JSON: value cannot be unmarshalled: unexpected end of JSON input
+[36m2019-08-25 16:57:40.914 UTC [viperutil] getKeysRecursively -> DEBU 00a[0m Found real value for peer.BCCSP.SW.FileKeyStore.KeyStore setting to string 
+[36m2019-08-25 16:57:40.914 UTC [viperutil] unmarshalJSON -> DEBU 00b[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:57:40.915 UTC [viperutil] getKeysRecursively -> DEBU 00c[0m Found real value for peer.BCCSP.SW.Hash setting to string SHA2
+[36m2019-08-25 16:57:40.935 UTC [viperutil] getKeysRecursively -> DEBU 00d[0m Found map[string]interface{} value for peer.BCCSP.PKCS11
+[36m2019-08-25 16:57:40.936 UTC [viperutil] unmarshalJSON -> DEBU 00e[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:57:40.936 UTC [viperutil] getKeysRecursively -> DEBU 00f[0m Found real value for peer.BCCSP.PKCS11.Security setting to <nil> <nil>
+[36m2019-08-25 16:57:40.937 UTC [viperutil] getKeysRecursively -> DEBU 010[0m Found map[string]interface{} value for peer.BCCSP.PKCS11.FileKeyStore
+[36m2019-08-25 16:57:40.937 UTC [viperutil] unmarshalJSON -> DEBU 011[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:57:40.937 UTC [viperutil] getKeysRecursively -> DEBU 012[0m Found real value for peer.BCCSP.PKCS11.FileKeyStore.KeyStore setting to <nil> <nil>
+[36m2019-08-25 16:57:40.938 UTC [viperutil] unmarshalJSON -> DEBU 013[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:57:40.938 UTC [viperutil] getKeysRecursively -> DEBU 014[0m Found real value for peer.BCCSP.PKCS11.Library setting to <nil> <nil>
+[36m2019-08-25 16:57:40.939 UTC [viperutil] unmarshalJSON -> DEBU 015[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:57:40.971 UTC [viperutil] getKeysRecursively -> DEBU 016[0m Found real value for peer.BCCSP.PKCS11.Label setting to <nil> <nil>
+[36m2019-08-25 16:57:40.971 UTC [viperutil] unmarshalJSON -> DEBU 017[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:57:40.972 UTC [viperutil] getKeysRecursively -> DEBU 018[0m Found real value for peer.BCCSP.PKCS11.Pin setting to <nil> <nil>
+[36m2019-08-25 16:57:40.972 UTC [viperutil] unmarshalJSON -> DEBU 019[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:57:40.972 UTC [viperutil] getKeysRecursively -> DEBU 01a[0m Found real value for peer.BCCSP.PKCS11.Hash setting to <nil> <nil>
+[36m2019-08-25 16:57:40.973 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 01b[0m map[peer.BCCSP:map[PKCS11:map[Security:<nil> FileKeyStore:map[KeyStore:<nil>] Library:<nil> Label:<nil> Pin:<nil> Hash:<nil>] Default:SW SW:map[Security:256 FileKeyStore:map[KeyStore:] Hash:SHA2]]]
+[36m2019-08-25 16:57:41.007 UTC [bccsp_sw] openKeyStore -> DEBU 01c[0m KeyStore opened at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore]...done
+[36m2019-08-25 16:57:41.011 UTC [bccsp] initBCCSP -> DEBU 01d[0m Initialize BCCSP [SW]
+[36m2019-08-25 16:57:41.017 UTC [msp] getPemMaterialFromDir -> DEBU 01e[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts
+[36m2019-08-25 16:57:41.019 UTC [msp] getPemMaterialFromDir -> DEBU 01f[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:57:41.023 UTC [msp] getPemMaterialFromDir -> DEBU 020[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts
+[36m2019-08-25 16:57:41.040 UTC [msp] getPemMaterialFromDir -> DEBU 021[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts/ca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:57:41.141 UTC [msp] getPemMaterialFromDir -> DEBU 022[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts
+[36m2019-08-25 16:57:41.141 UTC [msp] getPemMaterialFromDir -> DEBU 023[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:57:41.141 UTC [msp] getPemMaterialFromDir -> DEBU 024[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts
+[36m2019-08-25 16:57:41.141 UTC [msp] getMspConfig -> DEBU 025[0m Intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts: no such file or directory]
+[36m2019-08-25 16:57:41.141 UTC [msp] getPemMaterialFromDir -> DEBU 026[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts
+[36m2019-08-25 16:57:41.141 UTC [msp] getPemMaterialFromDir -> DEBU 027[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts/tlsca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:57:41.142 UTC [msp] getPemMaterialFromDir -> DEBU 028[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts
+[36m2019-08-25 16:57:41.142 UTC [msp] getMspConfig -> DEBU 029[0m TLS intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts: no such file or directory]
+[36m2019-08-25 16:57:41.142 UTC [msp] getPemMaterialFromDir -> DEBU 02a[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls
+[36m2019-08-25 16:57:41.142 UTC [msp] getMspConfig -> DEBU 02b[0m crls folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls: no such file or directory]
+[36m2019-08-25 16:57:41.142 UTC [msp] getMspConfig -> DEBU 02c[0m MSP configuration file not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml]: [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml: no such file or directory]
+[36m2019-08-25 16:57:41.156 UTC [msp] newBccspMsp -> DEBU 02d[0m Creating BCCSP-based MSP instance
+[36m2019-08-25 16:57:41.156 UTC [msp] New -> DEBU 02e[0m Creating Cache-MSP instance
+[36m2019-08-25 16:57:41.156 UTC [msp] loadLocaMSP -> DEBU 02f[0m Created new local MSP
+[36m2019-08-25 16:57:41.156 UTC [msp] Setup -> DEBU 030[0m Setting up MSP instance org1MSP
+[36m2019-08-25 16:57:41.157 UTC [msp.identity] newIdentity -> DEBU 031[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICTjCCAfSgAwIBAgIRAL6BcQTYy2/4oQruVQw5468wCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMS5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+cTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMS
+Y2Eub3JnMS5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYBP
+CN1zfGmZ5sairuwe+zPUv9FifEDAb1677WXJa9u5dox5FmrlZNaoJKbSC0E7zEuW
+sB1eINBPOpzHwCCoR6NtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsG
+AQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCA6gPwd
+mDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQDAgNIADBFAiEA
+mLopicH+GxHydqNhuspW7Xdpd1+wekhKTBHJgfP1iW0CIBBW7+nEIk4akAqWHSCE
+fiEaOMZQpGJGVSWzvpqyrvLv
+-----END CERTIFICATE-----
+[36m2019-08-25 16:57:41.157 UTC [msp.identity] newIdentity -> DEBU 032[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:57:41.476 UTC [msp.identity] newIdentity -> DEBU 033[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:57:41.512 UTC [bccsp_sw] loadPrivateKey -> DEBU 034[0m Loading private key [825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289] at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore/825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289_sk]...
+[36m2019-08-25 16:57:41.537 UTC [msp.identity] newIdentity -> DEBU 035[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:57:41.538 UTC [msp] setupSigningIdentity -> DEBU 036[0m Signing identity expires at 2029-08-22 16:51:00 +0000 UTC
+[36m2019-08-25 16:57:41.538 UTC [msp] Validate -> DEBU 037[0m MSP org1MSP validating identity
+[33m2019-08-25 16:57:41.540 UTC [main] SetOrdererEnv -> WARN 038[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:57:41.540 UTC [msp] GetDefaultSigningIdentity -> DEBU 039[0m Obtaining default signing identity
+[36m2019-08-25 16:57:41.547 UTC [grpc] DialContext -> DEBU 03a[0m parsed scheme: ""
+[36m2019-08-25 16:57:41.599 UTC [grpc] DialContext -> DEBU 03b[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:57:41.599 UTC [grpc] watcher -> DEBU 03c[0m ccResolverWrapper: sending new addresses to cc: [{orderer.hurley.lab:7050 0  <nil>}]
+[36m2019-08-25 16:57:41.599 UTC [grpc] switchBalancer -> DEBU 03d[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:57:41.640 UTC [grpc] HandleSubConnStateChange -> DEBU 03e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00047fca0, CONNECTING
+[36m2019-08-25 16:57:41.655 UTC [grpc] HandleSubConnStateChange -> DEBU 03f[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00047fca0, READY
+[34m2019-08-25 16:57:41.656 UTC [channelCmd] InitCmdFactory -> INFO 040[0m Endorser and orderer connections initialized
+[36m2019-08-25 16:57:41.739 UTC [msp] GetDefaultSigningIdentity -> DEBU 041[0m Obtaining default signing identity
+[36m2019-08-25 16:57:41.743 UTC [msp] GetDefaultSigningIdentity -> DEBU 042[0m Obtaining default signing identity
+[36m2019-08-25 16:57:41.743 UTC [msp.identity] Sign -> DEBU 043[0m Sign: plaintext: 0AB2060A076F7267314D535012A6062D...53616D706C65436F6E736F727469756D 
+[36m2019-08-25 16:57:41.768 UTC [msp.identity] Sign -> DEBU 044[0m Sign: digest: 84C101C0936DD723945477D28D145DBE42A6F69F034988E08C8DB3D968E14EEE 
+[36m2019-08-25 16:57:41.768 UTC [msp] GetDefaultSigningIdentity -> DEBU 045[0m Obtaining default signing identity
+[36m2019-08-25 16:57:41.769 UTC [msp] GetDefaultSigningIdentity -> DEBU 046[0m Obtaining default signing identity
+[36m2019-08-25 16:57:41.769 UTC [msp.identity] Sign -> DEBU 047[0m Sign: plaintext: 0AE3060A0F08021A060885FC8AEB0522...6F0759D6B7675C6A61D66AE000959F33 
+[36m2019-08-25 16:57:41.769 UTC [msp.identity] Sign -> DEBU 048[0m Sign: digest: 29ECCDA204B0013A5ACF44F8BE7F5FC2D92D92FFD084ECEBC992F4963E1285B6 
+[36m2019-08-25 16:57:41.776 UTC [grpc] DialContext -> DEBU 049[0m parsed scheme: ""
+[36m2019-08-25 16:57:41.776 UTC [grpc] DialContext -> DEBU 04a[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:57:41.776 UTC [grpc] watcher -> DEBU 04b[0m ccResolverWrapper: sending new addresses to cc: [{orderer.hurley.lab:7050 0  <nil>}]
+[36m2019-08-25 16:57:41.776 UTC [grpc] switchBalancer -> DEBU 04c[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:57:41.776 UTC [grpc] HandleSubConnStateChange -> DEBU 04d[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000460b50, CONNECTING
+[36m2019-08-25 16:57:41.916 UTC [grpc] HandleSubConnStateChange -> DEBU 04e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000460b50, READY
+[36m2019-08-25 16:57:42.533 UTC [msp] GetDefaultSigningIdentity -> DEBU 04f[0m Obtaining default signing identity
+[36m2019-08-25 16:57:42.535 UTC [msp] GetDefaultSigningIdentity -> DEBU 050[0m Obtaining default signing identity
+[36m2019-08-25 16:57:42.535 UTC [msp.identity] Sign -> DEBU 051[0m Sign: plaintext: 0AE3060A0F08051A060886FC8AEB0522...0296CEAFE18112080A021A0012021A00 
+[36m2019-08-25 16:57:42.535 UTC [msp.identity] Sign -> DEBU 052[0m Sign: digest: 8700CF23555A752B4D71A35BFF195124D2024CB04FD054DC061C1C8AF3D82D8B 
+[34m2019-08-25 16:57:42.956 UTC [cli.common] readBlock -> INFO 053[0m Received block: 0
+Joining ch1 channel on peer peer0.org1.hurley.lab
+++ docker exec peer0.org1.hurley.lab peer channel join -b /shared/ch1.block
+[33m2019-08-25 16:58:03.226 UTC [main] InitCmd -> WARN 001[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:03.239 UTC [viperutil] getKeysRecursively -> DEBU 002[0m Found map[string]interface{} value for peer.BCCSP
+[36m2019-08-25 16:58:03.252 UTC [viperutil] getKeysRecursively -> DEBU 003[0m Found map[string]interface{} value for peer.BCCSP.SW
+[36m2019-08-25 16:58:03.260 UTC [viperutil] unmarshalJSON -> DEBU 004[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:03.265 UTC [viperutil] getKeysRecursively -> DEBU 005[0m Found real value for peer.BCCSP.SW.Hash setting to string SHA2
+[36m2019-08-25 16:58:03.266 UTC [viperutil] unmarshalJSON -> DEBU 006[0m Unmarshal JSON: value is not a string: 256
+[36m2019-08-25 16:58:03.272 UTC [viperutil] getKeysRecursively -> DEBU 007[0m Found real value for peer.BCCSP.SW.Security setting to int 256
+[36m2019-08-25 16:58:03.273 UTC [viperutil] getKeysRecursively -> DEBU 008[0m Found map[string]interface{} value for peer.BCCSP.SW.FileKeyStore
+[36m2019-08-25 16:58:03.273 UTC [viperutil] unmarshalJSON -> DEBU 009[0m Unmarshal JSON: value cannot be unmarshalled: unexpected end of JSON input
+[36m2019-08-25 16:58:03.273 UTC [viperutil] getKeysRecursively -> DEBU 00a[0m Found real value for peer.BCCSP.SW.FileKeyStore.KeyStore setting to string 
+[36m2019-08-25 16:58:03.273 UTC [viperutil] getKeysRecursively -> DEBU 00b[0m Found map[string]interface{} value for peer.BCCSP.PKCS11
+[36m2019-08-25 16:58:03.274 UTC [viperutil] unmarshalJSON -> DEBU 00c[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:03.274 UTC [viperutil] getKeysRecursively -> DEBU 00d[0m Found real value for peer.BCCSP.PKCS11.Library setting to <nil> <nil>
+[36m2019-08-25 16:58:03.274 UTC [viperutil] unmarshalJSON -> DEBU 00e[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:03.275 UTC [viperutil] getKeysRecursively -> DEBU 00f[0m Found real value for peer.BCCSP.PKCS11.Label setting to <nil> <nil>
+[36m2019-08-25 16:58:03.322 UTC [viperutil] unmarshalJSON -> DEBU 010[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:03.323 UTC [viperutil] getKeysRecursively -> DEBU 011[0m Found real value for peer.BCCSP.PKCS11.Pin setting to <nil> <nil>
+[36m2019-08-25 16:58:03.348 UTC [viperutil] unmarshalJSON -> DEBU 012[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:03.358 UTC [viperutil] getKeysRecursively -> DEBU 013[0m Found real value for peer.BCCSP.PKCS11.Hash setting to <nil> <nil>
+[36m2019-08-25 16:58:03.359 UTC [viperutil] unmarshalJSON -> DEBU 014[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:03.359 UTC [viperutil] getKeysRecursively -> DEBU 015[0m Found real value for peer.BCCSP.PKCS11.Security setting to <nil> <nil>
+[36m2019-08-25 16:58:03.360 UTC [viperutil] getKeysRecursively -> DEBU 016[0m Found map[string]interface{} value for peer.BCCSP.PKCS11.FileKeyStore
+[36m2019-08-25 16:58:03.360 UTC [viperutil] unmarshalJSON -> DEBU 017[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:03.360 UTC [viperutil] getKeysRecursively -> DEBU 018[0m Found real value for peer.BCCSP.PKCS11.FileKeyStore.KeyStore setting to <nil> <nil>
+[36m2019-08-25 16:58:03.361 UTC [viperutil] unmarshalJSON -> DEBU 019[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:03.361 UTC [viperutil] getKeysRecursively -> DEBU 01a[0m Found real value for peer.BCCSP.Default setting to string SW
+[36m2019-08-25 16:58:03.361 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 01b[0m map[peer.BCCSP:map[PKCS11:map[Library:<nil> Label:<nil> Pin:<nil> Hash:<nil> Security:<nil> FileKeyStore:map[KeyStore:<nil>]] Default:SW SW:map[Hash:SHA2 Security:256 FileKeyStore:map[KeyStore:]]]]
+[36m2019-08-25 16:58:03.361 UTC [bccsp_sw] openKeyStore -> DEBU 01c[0m KeyStore opened at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore]...done
+[36m2019-08-25 16:58:03.361 UTC [bccsp] initBCCSP -> DEBU 01d[0m Initialize BCCSP [SW]
+[36m2019-08-25 16:58:03.362 UTC [msp] getPemMaterialFromDir -> DEBU 01e[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts
+[36m2019-08-25 16:58:03.362 UTC [msp] getPemMaterialFromDir -> DEBU 01f[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:03.362 UTC [msp] getPemMaterialFromDir -> DEBU 020[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts
+[36m2019-08-25 16:58:03.362 UTC [msp] getPemMaterialFromDir -> DEBU 021[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts/ca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:03.427 UTC [msp] getPemMaterialFromDir -> DEBU 022[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts
+[36m2019-08-25 16:58:03.427 UTC [msp] getPemMaterialFromDir -> DEBU 023[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:03.427 UTC [msp] getPemMaterialFromDir -> DEBU 024[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts
+[36m2019-08-25 16:58:03.427 UTC [msp] getMspConfig -> DEBU 025[0m Intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:03.427 UTC [msp] getPemMaterialFromDir -> DEBU 026[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts
+[36m2019-08-25 16:58:03.428 UTC [msp] getPemMaterialFromDir -> DEBU 027[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts/tlsca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:03.428 UTC [msp] getPemMaterialFromDir -> DEBU 028[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts
+[36m2019-08-25 16:58:03.428 UTC [msp] getMspConfig -> DEBU 029[0m TLS intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:03.428 UTC [msp] getPemMaterialFromDir -> DEBU 02a[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls
+[36m2019-08-25 16:58:03.428 UTC [msp] getMspConfig -> DEBU 02b[0m crls folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls: no such file or directory]
+[36m2019-08-25 16:58:03.428 UTC [msp] getMspConfig -> DEBU 02c[0m MSP configuration file not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml]: [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml: no such file or directory]
+[36m2019-08-25 16:58:03.429 UTC [msp] newBccspMsp -> DEBU 02d[0m Creating BCCSP-based MSP instance
+[36m2019-08-25 16:58:03.429 UTC [msp] New -> DEBU 02e[0m Creating Cache-MSP instance
+[36m2019-08-25 16:58:03.429 UTC [msp] loadLocaMSP -> DEBU 02f[0m Created new local MSP
+[36m2019-08-25 16:58:03.429 UTC [msp] Setup -> DEBU 030[0m Setting up MSP instance org1MSP
+[36m2019-08-25 16:58:03.467 UTC [msp.identity] newIdentity -> DEBU 031[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICTjCCAfSgAwIBAgIRAL6BcQTYy2/4oQruVQw5468wCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMS5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+cTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMS
+Y2Eub3JnMS5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYBP
+CN1zfGmZ5sairuwe+zPUv9FifEDAb1677WXJa9u5dox5FmrlZNaoJKbSC0E7zEuW
+sB1eINBPOpzHwCCoR6NtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsG
+AQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCA6gPwd
+mDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQDAgNIADBFAiEA
+mLopicH+GxHydqNhuspW7Xdpd1+wekhKTBHJgfP1iW0CIBBW7+nEIk4akAqWHSCE
+fiEaOMZQpGJGVSWzvpqyrvLv
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:03.468 UTC [msp.identity] newIdentity -> DEBU 032[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:03.856 UTC [msp.identity] newIdentity -> DEBU 033[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:03.878 UTC [bccsp_sw] loadPrivateKey -> DEBU 034[0m Loading private key [825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289] at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore/825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289_sk]...
+[36m2019-08-25 16:58:03.902 UTC [msp.identity] newIdentity -> DEBU 035[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:03.903 UTC [msp] setupSigningIdentity -> DEBU 036[0m Signing identity expires at 2029-08-22 16:51:00 +0000 UTC
+[36m2019-08-25 16:58:03.935 UTC [msp] Validate -> DEBU 037[0m MSP org1MSP validating identity
+[33m2019-08-25 16:58:03.936 UTC [main] SetOrdererEnv -> WARN 038[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:03.936 UTC [msp] GetDefaultSigningIdentity -> DEBU 039[0m Obtaining default signing identity
+[36m2019-08-25 16:58:03.958 UTC [grpc] DialContext -> DEBU 03a[0m parsed scheme: ""
+[36m2019-08-25 16:58:03.958 UTC [grpc] DialContext -> DEBU 03b[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:58:03.959 UTC [grpc] watcher -> DEBU 03c[0m ccResolverWrapper: sending new addresses to cc: [{peer0.org1.hurley.lab:7051 0  <nil>}]
+[36m2019-08-25 16:58:03.959 UTC [grpc] switchBalancer -> DEBU 03d[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:58:03.973 UTC [grpc] HandleSubConnStateChange -> DEBU 03e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0001778f0, CONNECTING
+[36m2019-08-25 16:58:04.003 UTC [grpc] createTransport -> DEBU 03f[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:04.003 UTC [grpc] HandleSubConnStateChange -> DEBU 040[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0001778f0, TRANSIENT_FAILURE
+[36m2019-08-25 16:58:05.022 UTC [grpc] HandleSubConnStateChange -> DEBU 041[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0001778f0, CONNECTING
+[36m2019-08-25 16:58:05.030 UTC [grpc] createTransport -> DEBU 042[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:05.055 UTC [grpc] HandleSubConnStateChange -> DEBU 043[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0001778f0, TRANSIENT_FAILURE
+[36m2019-08-25 16:58:06.258 UTC [grpc] HandleSubConnStateChange -> DEBU 044[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0001778f0, CONNECTING
+[36m2019-08-25 16:58:06.265 UTC [grpc] createTransport -> DEBU 045[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:06.280 UTC [grpc] HandleSubConnStateChange -> DEBU 046[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0001778f0, TRANSIENT_FAILURE
+Error: error getting endorser client for channel: endorser client failed to connect to peer0.org1.hurley.lab:7051: failed to create new connection: context deadline exceeded
+++ echo fail
++ output=fail
++ set +x
+peer0.org1.hurley.lab failed to join the channel, Retry after 3 seconds
+Joining ch1 channel on peer peer0.org1.hurley.lab
+++ docker exec peer0.org1.hurley.lab peer channel join -b /shared/ch1.block
+[33m2019-08-25 16:58:14.871 UTC [main] InitCmd -> WARN 001[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:14.883 UTC [viperutil] getKeysRecursively -> DEBU 002[0m Found map[string]interface{} value for peer.BCCSP
+[36m2019-08-25 16:58:14.897 UTC [viperutil] getKeysRecursively -> DEBU 003[0m Found map[string]interface{} value for peer.BCCSP.SW
+[36m2019-08-25 16:58:14.897 UTC [viperutil] getKeysRecursively -> DEBU 004[0m Found map[string]interface{} value for peer.BCCSP.SW.FileKeyStore
+[36m2019-08-25 16:58:14.912 UTC [viperutil] unmarshalJSON -> DEBU 005[0m Unmarshal JSON: value cannot be unmarshalled: unexpected end of JSON input
+[36m2019-08-25 16:58:14.912 UTC [viperutil] getKeysRecursively -> DEBU 006[0m Found real value for peer.BCCSP.SW.FileKeyStore.KeyStore setting to string 
+[36m2019-08-25 16:58:14.913 UTC [viperutil] unmarshalJSON -> DEBU 007[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:14.913 UTC [viperutil] getKeysRecursively -> DEBU 008[0m Found real value for peer.BCCSP.SW.Hash setting to string SHA2
+[36m2019-08-25 16:58:14.913 UTC [viperutil] unmarshalJSON -> DEBU 009[0m Unmarshal JSON: value is not a string: 256
+[36m2019-08-25 16:58:14.913 UTC [viperutil] getKeysRecursively -> DEBU 00a[0m Found real value for peer.BCCSP.SW.Security setting to int 256
+[36m2019-08-25 16:58:14.914 UTC [viperutil] getKeysRecursively -> DEBU 00b[0m Found map[string]interface{} value for peer.BCCSP.PKCS11
+[36m2019-08-25 16:58:14.914 UTC [viperutil] unmarshalJSON -> DEBU 00c[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:14.949 UTC [viperutil] getKeysRecursively -> DEBU 00d[0m Found real value for peer.BCCSP.PKCS11.Hash setting to <nil> <nil>
+[36m2019-08-25 16:58:14.949 UTC [viperutil] unmarshalJSON -> DEBU 00e[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:14.949 UTC [viperutil] getKeysRecursively -> DEBU 00f[0m Found real value for peer.BCCSP.PKCS11.Security setting to <nil> <nil>
+[36m2019-08-25 16:58:14.950 UTC [viperutil] getKeysRecursively -> DEBU 010[0m Found map[string]interface{} value for peer.BCCSP.PKCS11.FileKeyStore
+[36m2019-08-25 16:58:14.950 UTC [viperutil] unmarshalJSON -> DEBU 011[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:14.996 UTC [viperutil] getKeysRecursively -> DEBU 012[0m Found real value for peer.BCCSP.PKCS11.FileKeyStore.KeyStore setting to <nil> <nil>
+[36m2019-08-25 16:58:14.997 UTC [viperutil] unmarshalJSON -> DEBU 013[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:14.997 UTC [viperutil] getKeysRecursively -> DEBU 014[0m Found real value for peer.BCCSP.PKCS11.Library setting to <nil> <nil>
+[36m2019-08-25 16:58:14.998 UTC [viperutil] unmarshalJSON -> DEBU 015[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:14.998 UTC [viperutil] getKeysRecursively -> DEBU 016[0m Found real value for peer.BCCSP.PKCS11.Label setting to <nil> <nil>
+[36m2019-08-25 16:58:14.998 UTC [viperutil] unmarshalJSON -> DEBU 017[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:15.034 UTC [viperutil] getKeysRecursively -> DEBU 018[0m Found real value for peer.BCCSP.PKCS11.Pin setting to <nil> <nil>
+[36m2019-08-25 16:58:15.035 UTC [viperutil] unmarshalJSON -> DEBU 019[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:15.035 UTC [viperutil] getKeysRecursively -> DEBU 01a[0m Found real value for peer.BCCSP.Default setting to string SW
+[36m2019-08-25 16:58:15.035 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 01b[0m map[peer.BCCSP:map[PKCS11:map[Hash:<nil> Security:<nil> FileKeyStore:map[KeyStore:<nil>] Library:<nil> Label:<nil> Pin:<nil>] Default:SW SW:map[Hash:SHA2 Security:256 FileKeyStore:map[KeyStore:]]]]
+[36m2019-08-25 16:58:15.036 UTC [bccsp_sw] openKeyStore -> DEBU 01c[0m KeyStore opened at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore]...done
+[36m2019-08-25 16:58:15.036 UTC [bccsp] initBCCSP -> DEBU 01d[0m Initialize BCCSP [SW]
+[36m2019-08-25 16:58:15.036 UTC [msp] getPemMaterialFromDir -> DEBU 01e[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts
+[36m2019-08-25 16:58:15.036 UTC [msp] getPemMaterialFromDir -> DEBU 01f[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:15.036 UTC [msp] getPemMaterialFromDir -> DEBU 020[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts
+[36m2019-08-25 16:58:15.037 UTC [msp] getPemMaterialFromDir -> DEBU 021[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts/ca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:15.037 UTC [msp] getPemMaterialFromDir -> DEBU 022[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts
+[36m2019-08-25 16:58:15.037 UTC [msp] getPemMaterialFromDir -> DEBU 023[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:15.038 UTC [msp] getPemMaterialFromDir -> DEBU 024[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts
+[36m2019-08-25 16:58:15.038 UTC [msp] getMspConfig -> DEBU 025[0m Intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:15.038 UTC [msp] getPemMaterialFromDir -> DEBU 026[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts
+[36m2019-08-25 16:58:15.038 UTC [msp] getPemMaterialFromDir -> DEBU 027[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts/tlsca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:15.038 UTC [msp] getPemMaterialFromDir -> DEBU 028[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts
+[36m2019-08-25 16:58:15.038 UTC [msp] getMspConfig -> DEBU 029[0m TLS intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:15.038 UTC [msp] getPemMaterialFromDir -> DEBU 02a[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls
+[36m2019-08-25 16:58:15.038 UTC [msp] getMspConfig -> DEBU 02b[0m crls folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls: no such file or directory]
+[36m2019-08-25 16:58:15.038 UTC [msp] getMspConfig -> DEBU 02c[0m MSP configuration file not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml]: [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml: no such file or directory]
+[36m2019-08-25 16:58:15.113 UTC [msp] newBccspMsp -> DEBU 02d[0m Creating BCCSP-based MSP instance
+[36m2019-08-25 16:58:15.114 UTC [msp] New -> DEBU 02e[0m Creating Cache-MSP instance
+[36m2019-08-25 16:58:15.114 UTC [msp] loadLocaMSP -> DEBU 02f[0m Created new local MSP
+[36m2019-08-25 16:58:15.114 UTC [msp] Setup -> DEBU 030[0m Setting up MSP instance org1MSP
+[36m2019-08-25 16:58:15.120 UTC [msp.identity] newIdentity -> DEBU 031[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICTjCCAfSgAwIBAgIRAL6BcQTYy2/4oQruVQw5468wCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMS5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+cTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMS
+Y2Eub3JnMS5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYBP
+CN1zfGmZ5sairuwe+zPUv9FifEDAb1677WXJa9u5dox5FmrlZNaoJKbSC0E7zEuW
+sB1eINBPOpzHwCCoR6NtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsG
+AQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCA6gPwd
+mDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQDAgNIADBFAiEA
+mLopicH+GxHydqNhuspW7Xdpd1+wekhKTBHJgfP1iW0CIBBW7+nEIk4akAqWHSCE
+fiEaOMZQpGJGVSWzvpqyrvLv
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:15.120 UTC [msp.identity] newIdentity -> DEBU 032[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:15.657 UTC [msp.identity] newIdentity -> DEBU 033[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:15.768 UTC [bccsp_sw] loadPrivateKey -> DEBU 034[0m Loading private key [825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289] at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore/825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289_sk]...
+[36m2019-08-25 16:58:15.769 UTC [msp.identity] newIdentity -> DEBU 035[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:15.770 UTC [msp] setupSigningIdentity -> DEBU 036[0m Signing identity expires at 2029-08-22 16:51:00 +0000 UTC
+[36m2019-08-25 16:58:15.770 UTC [msp] Validate -> DEBU 037[0m MSP org1MSP validating identity
+[33m2019-08-25 16:58:15.805 UTC [main] SetOrdererEnv -> WARN 038[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:15.808 UTC [msp] GetDefaultSigningIdentity -> DEBU 039[0m Obtaining default signing identity
+[36m2019-08-25 16:58:15.815 UTC [grpc] DialContext -> DEBU 03a[0m parsed scheme: ""
+[36m2019-08-25 16:58:15.820 UTC [grpc] DialContext -> DEBU 03b[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:58:15.843 UTC [grpc] watcher -> DEBU 03c[0m ccResolverWrapper: sending new addresses to cc: [{peer0.org1.hurley.lab:7051 0  <nil>}]
+[36m2019-08-25 16:58:15.843 UTC [grpc] switchBalancer -> DEBU 03d[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:58:15.844 UTC [grpc] HandleSubConnStateChange -> DEBU 03e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000199cd0, CONNECTING
+[36m2019-08-25 16:58:15.855 UTC [grpc] createTransport -> DEBU 03f[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:15.855 UTC [grpc] HandleSubConnStateChange -> DEBU 040[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000199cd0, TRANSIENT_FAILURE
+[36m2019-08-25 16:58:16.845 UTC [grpc] HandleSubConnStateChange -> DEBU 041[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000199cd0, CONNECTING
+[36m2019-08-25 16:58:16.871 UTC [grpc] createTransport -> DEBU 042[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:16.872 UTC [grpc] HandleSubConnStateChange -> DEBU 043[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000199cd0, TRANSIENT_FAILURE
+[36m2019-08-25 16:58:18.511 UTC [grpc] HandleSubConnStateChange -> DEBU 044[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000199cd0, CONNECTING
+[36m2019-08-25 16:58:18.519 UTC [grpc] createTransport -> DEBU 045[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:18.523 UTC [grpc] HandleSubConnStateChange -> DEBU 046[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000199cd0, TRANSIENT_FAILURE
+[36m2019-08-25 16:58:18.847 UTC [grpc] func1 -> DEBU 047[0m Failed to dial peer0.org1.hurley.lab:7051: context canceled; please retry.
+Error: error getting endorser client for channel: endorser client failed to connect to peer0.org1.hurley.lab:7051: failed to create new connection: context deadline exceeded
+++ echo fail
++ output=fail
++ set +x
+peer0.org1.hurley.lab failed to join the channel, Retry after 3 seconds
+Joining ch1 channel on peer peer0.org1.hurley.lab
+++ docker exec peer0.org1.hurley.lab peer channel join -b /shared/ch1.block
+[33m2019-08-25 16:58:26.598 UTC [main] InitCmd -> WARN 001[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:26.616 UTC [viperutil] getKeysRecursively -> DEBU 002[0m Found map[string]interface{} value for peer.BCCSP
+[36m2019-08-25 16:58:26.632 UTC [viperutil] unmarshalJSON -> DEBU 003[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:26.632 UTC [viperutil] getKeysRecursively -> DEBU 004[0m Found real value for peer.BCCSP.Default setting to string SW
+[36m2019-08-25 16:58:26.633 UTC [viperutil] getKeysRecursively -> DEBU 005[0m Found map[string]interface{} value for peer.BCCSP.SW
+[36m2019-08-25 16:58:26.633 UTC [viperutil] unmarshalJSON -> DEBU 006[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:26.633 UTC [viperutil] getKeysRecursively -> DEBU 007[0m Found real value for peer.BCCSP.SW.Hash setting to string SHA2
+[36m2019-08-25 16:58:26.634 UTC [viperutil] unmarshalJSON -> DEBU 008[0m Unmarshal JSON: value is not a string: 256
+[36m2019-08-25 16:58:26.634 UTC [viperutil] getKeysRecursively -> DEBU 009[0m Found real value for peer.BCCSP.SW.Security setting to int 256
+[36m2019-08-25 16:58:26.634 UTC [viperutil] getKeysRecursively -> DEBU 00a[0m Found map[string]interface{} value for peer.BCCSP.SW.FileKeyStore
+[36m2019-08-25 16:58:26.634 UTC [viperutil] unmarshalJSON -> DEBU 00b[0m Unmarshal JSON: value cannot be unmarshalled: unexpected end of JSON input
+[36m2019-08-25 16:58:26.634 UTC [viperutil] getKeysRecursively -> DEBU 00c[0m Found real value for peer.BCCSP.SW.FileKeyStore.KeyStore setting to string 
+[36m2019-08-25 16:58:26.683 UTC [viperutil] getKeysRecursively -> DEBU 00d[0m Found map[string]interface{} value for peer.BCCSP.PKCS11
+[36m2019-08-25 16:58:26.683 UTC [viperutil] unmarshalJSON -> DEBU 00e[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:26.683 UTC [viperutil] getKeysRecursively -> DEBU 00f[0m Found real value for peer.BCCSP.PKCS11.Hash setting to <nil> <nil>
+[36m2019-08-25 16:58:26.684 UTC [viperutil] unmarshalJSON -> DEBU 010[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:26.684 UTC [viperutil] getKeysRecursively -> DEBU 011[0m Found real value for peer.BCCSP.PKCS11.Security setting to <nil> <nil>
+[36m2019-08-25 16:58:26.685 UTC [viperutil] getKeysRecursively -> DEBU 012[0m Found map[string]interface{} value for peer.BCCSP.PKCS11.FileKeyStore
+[36m2019-08-25 16:58:26.685 UTC [viperutil] unmarshalJSON -> DEBU 013[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:26.685 UTC [viperutil] getKeysRecursively -> DEBU 014[0m Found real value for peer.BCCSP.PKCS11.FileKeyStore.KeyStore setting to <nil> <nil>
+[36m2019-08-25 16:58:26.686 UTC [viperutil] unmarshalJSON -> DEBU 015[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:26.686 UTC [viperutil] getKeysRecursively -> DEBU 016[0m Found real value for peer.BCCSP.PKCS11.Library setting to <nil> <nil>
+[36m2019-08-25 16:58:26.720 UTC [viperutil] unmarshalJSON -> DEBU 017[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:26.720 UTC [viperutil] getKeysRecursively -> DEBU 018[0m Found real value for peer.BCCSP.PKCS11.Label setting to <nil> <nil>
+[36m2019-08-25 16:58:26.745 UTC [viperutil] unmarshalJSON -> DEBU 019[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:26.745 UTC [viperutil] getKeysRecursively -> DEBU 01a[0m Found real value for peer.BCCSP.PKCS11.Pin setting to <nil> <nil>
+[36m2019-08-25 16:58:26.746 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 01b[0m map[peer.BCCSP:map[SW:map[Security:256 FileKeyStore:map[KeyStore:] Hash:SHA2] PKCS11:map[Hash:<nil> Security:<nil> FileKeyStore:map[KeyStore:<nil>] Library:<nil> Label:<nil> Pin:<nil>] Default:SW]]
+[36m2019-08-25 16:58:26.746 UTC [bccsp_sw] openKeyStore -> DEBU 01c[0m KeyStore opened at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore]...done
+[36m2019-08-25 16:58:26.746 UTC [bccsp] initBCCSP -> DEBU 01d[0m Initialize BCCSP [SW]
+[36m2019-08-25 16:58:26.746 UTC [msp] getPemMaterialFromDir -> DEBU 01e[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts
+[36m2019-08-25 16:58:26.782 UTC [msp] getPemMaterialFromDir -> DEBU 01f[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:26.782 UTC [msp] getPemMaterialFromDir -> DEBU 020[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts
+[36m2019-08-25 16:58:26.782 UTC [msp] getPemMaterialFromDir -> DEBU 021[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts/ca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:26.782 UTC [msp] getPemMaterialFromDir -> DEBU 022[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts
+[36m2019-08-25 16:58:26.782 UTC [msp] getPemMaterialFromDir -> DEBU 023[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:26.792 UTC [msp] getPemMaterialFromDir -> DEBU 024[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts
+[36m2019-08-25 16:58:26.792 UTC [msp] getMspConfig -> DEBU 025[0m Intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:26.792 UTC [msp] getPemMaterialFromDir -> DEBU 026[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts
+[36m2019-08-25 16:58:26.793 UTC [msp] getPemMaterialFromDir -> DEBU 027[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts/tlsca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:26.793 UTC [msp] getPemMaterialFromDir -> DEBU 028[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts
+[36m2019-08-25 16:58:26.793 UTC [msp] getMspConfig -> DEBU 029[0m TLS intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:26.793 UTC [msp] getPemMaterialFromDir -> DEBU 02a[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls
+[36m2019-08-25 16:58:26.793 UTC [msp] getMspConfig -> DEBU 02b[0m crls folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls: no such file or directory]
+[36m2019-08-25 16:58:26.793 UTC [msp] getMspConfig -> DEBU 02c[0m MSP configuration file not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml]: [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml: no such file or directory]
+[36m2019-08-25 16:58:26.794 UTC [msp] newBccspMsp -> DEBU 02d[0m Creating BCCSP-based MSP instance
+[36m2019-08-25 16:58:26.794 UTC [msp] New -> DEBU 02e[0m Creating Cache-MSP instance
+[36m2019-08-25 16:58:26.794 UTC [msp] loadLocaMSP -> DEBU 02f[0m Created new local MSP
+[36m2019-08-25 16:58:26.794 UTC [msp] Setup -> DEBU 030[0m Setting up MSP instance org1MSP
+[36m2019-08-25 16:58:26.832 UTC [msp.identity] newIdentity -> DEBU 031[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICTjCCAfSgAwIBAgIRAL6BcQTYy2/4oQruVQw5468wCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMS5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+cTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMS
+Y2Eub3JnMS5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYBP
+CN1zfGmZ5sairuwe+zPUv9FifEDAb1677WXJa9u5dox5FmrlZNaoJKbSC0E7zEuW
+sB1eINBPOpzHwCCoR6NtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsG
+AQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCA6gPwd
+mDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQDAgNIADBFAiEA
+mLopicH+GxHydqNhuspW7Xdpd1+wekhKTBHJgfP1iW0CIBBW7+nEIk4akAqWHSCE
+fiEaOMZQpGJGVSWzvpqyrvLv
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:26.833 UTC [msp.identity] newIdentity -> DEBU 032[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:27.156 UTC [msp.identity] newIdentity -> DEBU 033[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:27.167 UTC [bccsp_sw] loadPrivateKey -> DEBU 034[0m Loading private key [825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289] at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore/825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289_sk]...
+[36m2019-08-25 16:58:27.176 UTC [msp.identity] newIdentity -> DEBU 035[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:27.181 UTC [msp] setupSigningIdentity -> DEBU 036[0m Signing identity expires at 2029-08-22 16:51:00 +0000 UTC
+[36m2019-08-25 16:58:27.185 UTC [msp] Validate -> DEBU 037[0m MSP org1MSP validating identity
+[33m2019-08-25 16:58:27.217 UTC [main] SetOrdererEnv -> WARN 038[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:27.217 UTC [msp] GetDefaultSigningIdentity -> DEBU 039[0m Obtaining default signing identity
+[36m2019-08-25 16:58:27.232 UTC [grpc] DialContext -> DEBU 03a[0m parsed scheme: ""
+[36m2019-08-25 16:58:27.232 UTC [grpc] DialContext -> DEBU 03b[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:58:27.232 UTC [grpc] watcher -> DEBU 03c[0m ccResolverWrapper: sending new addresses to cc: [{peer0.org1.hurley.lab:7051 0  <nil>}]
+[36m2019-08-25 16:58:27.232 UTC [grpc] switchBalancer -> DEBU 03d[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:58:27.232 UTC [grpc] HandleSubConnStateChange -> DEBU 03e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0004858e0, CONNECTING
+[36m2019-08-25 16:58:27.249 UTC [grpc] createTransport -> DEBU 03f[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:27.249 UTC [grpc] HandleSubConnStateChange -> DEBU 040[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0004858e0, TRANSIENT_FAILURE
+[36m2019-08-25 16:58:28.244 UTC [grpc] HandleSubConnStateChange -> DEBU 041[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0004858e0, CONNECTING
+[36m2019-08-25 16:58:28.252 UTC [grpc] createTransport -> DEBU 042[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:28.256 UTC [grpc] HandleSubConnStateChange -> DEBU 043[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0004858e0, TRANSIENT_FAILURE
+[36m2019-08-25 16:58:29.631 UTC [grpc] HandleSubConnStateChange -> DEBU 044[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0004858e0, CONNECTING
+[36m2019-08-25 16:58:29.633 UTC [grpc] createTransport -> DEBU 045[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:29.633 UTC [grpc] HandleSubConnStateChange -> DEBU 046[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0004858e0, TRANSIENT_FAILURE
+Error: error getting endorser client for channel: endorser client failed to connect to peer0.org1.hurley.lab:7051: failed to create new connection: context deadline exceeded
+++ echo fail
++ output=fail
++ set +x
+peer0.org1.hurley.lab failed to join the channel, Retry after 3 seconds
+Joining ch1 channel on peer peer0.org1.hurley.lab
+++ docker exec peer0.org1.hurley.lab peer channel join -b /shared/ch1.block
+[33m2019-08-25 16:58:35.685 UTC [main] InitCmd -> WARN 001[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:35.697 UTC [viperutil] getKeysRecursively -> DEBU 002[0m Found map[string]interface{} value for peer.BCCSP
+[36m2019-08-25 16:58:35.718 UTC [viperutil] unmarshalJSON -> DEBU 003[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:35.718 UTC [viperutil] getKeysRecursively -> DEBU 004[0m Found real value for peer.BCCSP.Default setting to string SW
+[36m2019-08-25 16:58:35.718 UTC [viperutil] getKeysRecursively -> DEBU 005[0m Found map[string]interface{} value for peer.BCCSP.SW
+[36m2019-08-25 16:58:35.718 UTC [viperutil] unmarshalJSON -> DEBU 006[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:35.719 UTC [viperutil] getKeysRecursively -> DEBU 007[0m Found real value for peer.BCCSP.SW.Hash setting to string SHA2
+[36m2019-08-25 16:58:35.719 UTC [viperutil] unmarshalJSON -> DEBU 008[0m Unmarshal JSON: value is not a string: 256
+[36m2019-08-25 16:58:35.719 UTC [viperutil] getKeysRecursively -> DEBU 009[0m Found real value for peer.BCCSP.SW.Security setting to int 256
+[36m2019-08-25 16:58:35.719 UTC [viperutil] getKeysRecursively -> DEBU 00a[0m Found map[string]interface{} value for peer.BCCSP.SW.FileKeyStore
+[36m2019-08-25 16:58:35.719 UTC [viperutil] unmarshalJSON -> DEBU 00b[0m Unmarshal JSON: value cannot be unmarshalled: unexpected end of JSON input
+[36m2019-08-25 16:58:35.720 UTC [viperutil] getKeysRecursively -> DEBU 00c[0m Found real value for peer.BCCSP.SW.FileKeyStore.KeyStore setting to string 
+[36m2019-08-25 16:58:35.720 UTC [viperutil] getKeysRecursively -> DEBU 00d[0m Found map[string]interface{} value for peer.BCCSP.PKCS11
+[36m2019-08-25 16:58:35.720 UTC [viperutil] unmarshalJSON -> DEBU 00e[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:35.721 UTC [viperutil] getKeysRecursively -> DEBU 00f[0m Found real value for peer.BCCSP.PKCS11.Pin setting to <nil> <nil>
+[36m2019-08-25 16:58:35.721 UTC [viperutil] unmarshalJSON -> DEBU 010[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:35.721 UTC [viperutil] getKeysRecursively -> DEBU 011[0m Found real value for peer.BCCSP.PKCS11.Hash setting to <nil> <nil>
+[36m2019-08-25 16:58:35.722 UTC [viperutil] unmarshalJSON -> DEBU 012[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:35.722 UTC [viperutil] getKeysRecursively -> DEBU 013[0m Found real value for peer.BCCSP.PKCS11.Security setting to <nil> <nil>
+[36m2019-08-25 16:58:35.722 UTC [viperutil] getKeysRecursively -> DEBU 014[0m Found map[string]interface{} value for peer.BCCSP.PKCS11.FileKeyStore
+[36m2019-08-25 16:58:35.723 UTC [viperutil] unmarshalJSON -> DEBU 015[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:35.723 UTC [viperutil] getKeysRecursively -> DEBU 016[0m Found real value for peer.BCCSP.PKCS11.FileKeyStore.KeyStore setting to <nil> <nil>
+[36m2019-08-25 16:58:35.724 UTC [viperutil] unmarshalJSON -> DEBU 017[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:35.724 UTC [viperutil] getKeysRecursively -> DEBU 018[0m Found real value for peer.BCCSP.PKCS11.Library setting to <nil> <nil>
+[36m2019-08-25 16:58:35.724 UTC [viperutil] unmarshalJSON -> DEBU 019[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:35.725 UTC [viperutil] getKeysRecursively -> DEBU 01a[0m Found real value for peer.BCCSP.PKCS11.Label setting to <nil> <nil>
+[36m2019-08-25 16:58:35.725 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 01b[0m map[peer.BCCSP:map[PKCS11:map[Pin:<nil> Hash:<nil> Security:<nil> FileKeyStore:map[KeyStore:<nil>] Library:<nil> Label:<nil>] Default:SW SW:map[Hash:SHA2 Security:256 FileKeyStore:map[KeyStore:]]]]
+[36m2019-08-25 16:58:35.725 UTC [bccsp_sw] openKeyStore -> DEBU 01c[0m KeyStore opened at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore]...done
+[36m2019-08-25 16:58:35.726 UTC [bccsp] initBCCSP -> DEBU 01d[0m Initialize BCCSP [SW]
+[36m2019-08-25 16:58:35.726 UTC [msp] getPemMaterialFromDir -> DEBU 01e[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts
+[36m2019-08-25 16:58:35.726 UTC [msp] getPemMaterialFromDir -> DEBU 01f[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:35.726 UTC [msp] getPemMaterialFromDir -> DEBU 020[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts
+[36m2019-08-25 16:58:35.726 UTC [msp] getPemMaterialFromDir -> DEBU 021[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts/ca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:35.726 UTC [msp] getPemMaterialFromDir -> DEBU 022[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts
+[36m2019-08-25 16:58:35.727 UTC [msp] getPemMaterialFromDir -> DEBU 023[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:35.727 UTC [msp] getPemMaterialFromDir -> DEBU 024[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts
+[36m2019-08-25 16:58:35.727 UTC [msp] getMspConfig -> DEBU 025[0m Intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:35.727 UTC [msp] getPemMaterialFromDir -> DEBU 026[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts
+[36m2019-08-25 16:58:35.727 UTC [msp] getPemMaterialFromDir -> DEBU 027[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts/tlsca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:35.728 UTC [msp] getPemMaterialFromDir -> DEBU 028[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts
+[36m2019-08-25 16:58:35.728 UTC [msp] getMspConfig -> DEBU 029[0m TLS intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:35.728 UTC [msp] getPemMaterialFromDir -> DEBU 02a[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls
+[36m2019-08-25 16:58:35.728 UTC [msp] getMspConfig -> DEBU 02b[0m crls folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls: no such file or directory]
+[36m2019-08-25 16:58:35.728 UTC [msp] getMspConfig -> DEBU 02c[0m MSP configuration file not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml]: [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml: no such file or directory]
+[36m2019-08-25 16:58:35.729 UTC [msp] newBccspMsp -> DEBU 02d[0m Creating BCCSP-based MSP instance
+[36m2019-08-25 16:58:35.729 UTC [msp] New -> DEBU 02e[0m Creating Cache-MSP instance
+[36m2019-08-25 16:58:35.729 UTC [msp] loadLocaMSP -> DEBU 02f[0m Created new local MSP
+[36m2019-08-25 16:58:35.729 UTC [msp] Setup -> DEBU 030[0m Setting up MSP instance org1MSP
+[36m2019-08-25 16:58:35.730 UTC [msp.identity] newIdentity -> DEBU 031[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICTjCCAfSgAwIBAgIRAL6BcQTYy2/4oQruVQw5468wCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMS5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+cTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMS
+Y2Eub3JnMS5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYBP
+CN1zfGmZ5sairuwe+zPUv9FifEDAb1677WXJa9u5dox5FmrlZNaoJKbSC0E7zEuW
+sB1eINBPOpzHwCCoR6NtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsG
+AQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCA6gPwd
+mDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQDAgNIADBFAiEA
+mLopicH+GxHydqNhuspW7Xdpd1+wekhKTBHJgfP1iW0CIBBW7+nEIk4akAqWHSCE
+fiEaOMZQpGJGVSWzvpqyrvLv
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:35.747 UTC [msp.identity] newIdentity -> DEBU 032[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:35.878 UTC [msp.identity] newIdentity -> DEBU 033[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:35.894 UTC [bccsp_sw] loadPrivateKey -> DEBU 034[0m Loading private key [825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289] at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore/825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289_sk]...
+[36m2019-08-25 16:58:35.894 UTC [msp.identity] newIdentity -> DEBU 035[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:35.903 UTC [msp] setupSigningIdentity -> DEBU 036[0m Signing identity expires at 2029-08-22 16:51:00 +0000 UTC
+[36m2019-08-25 16:58:35.903 UTC [msp] Validate -> DEBU 037[0m MSP org1MSP validating identity
+[33m2019-08-25 16:58:35.904 UTC [main] SetOrdererEnv -> WARN 038[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:35.905 UTC [msp] GetDefaultSigningIdentity -> DEBU 039[0m Obtaining default signing identity
+[36m2019-08-25 16:58:35.912 UTC [grpc] DialContext -> DEBU 03a[0m parsed scheme: ""
+[36m2019-08-25 16:58:35.912 UTC [grpc] DialContext -> DEBU 03b[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:58:35.913 UTC [grpc] watcher -> DEBU 03c[0m ccResolverWrapper: sending new addresses to cc: [{peer0.org1.hurley.lab:7051 0  <nil>}]
+[36m2019-08-25 16:58:35.913 UTC [grpc] switchBalancer -> DEBU 03d[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:58:35.913 UTC [grpc] HandleSubConnStateChange -> DEBU 03e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000263200, CONNECTING
+[36m2019-08-25 16:58:35.923 UTC [grpc] createTransport -> DEBU 03f[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:35.926 UTC [grpc] HandleSubConnStateChange -> DEBU 040[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000263200, TRANSIENT_FAILURE
+[36m2019-08-25 16:58:36.914 UTC [grpc] HandleSubConnStateChange -> DEBU 041[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000263200, CONNECTING
+[36m2019-08-25 16:58:36.916 UTC [grpc] createTransport -> DEBU 042[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:36.916 UTC [grpc] HandleSubConnStateChange -> DEBU 043[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000263200, TRANSIENT_FAILURE
+[36m2019-08-25 16:58:38.601 UTC [grpc] HandleSubConnStateChange -> DEBU 044[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000263200, CONNECTING
+[36m2019-08-25 16:58:38.607 UTC [grpc] createTransport -> DEBU 045[0m grpc: addrConn.createTransport failed to connect to {peer0.org1.hurley.lab:7051 0  <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 172.18.0.7:7051: connect: connection refused". Reconnecting...
+[36m2019-08-25 16:58:38.607 UTC [grpc] HandleSubConnStateChange -> DEBU 046[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000263200, TRANSIENT_FAILURE
+Error: error getting endorser client for channel: endorser client failed to connect to peer0.org1.hurley.lab:7051: failed to create new connection: context deadline exceeded
+++ echo fail
++ output=fail
++ set +x
+peer0.org1.hurley.lab failed to join the channel, Retry after 3 seconds
+Joining ch1 channel on peer peer0.org1.hurley.lab
+++ docker exec peer0.org1.hurley.lab peer channel join -b /shared/ch1.block
+[33m2019-08-25 16:58:45.565 UTC [main] InitCmd -> WARN 001[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:45.573 UTC [viperutil] getKeysRecursively -> DEBU 002[0m Found map[string]interface{} value for peer.BCCSP
+[36m2019-08-25 16:58:45.588 UTC [viperutil] getKeysRecursively -> DEBU 003[0m Found map[string]interface{} value for peer.BCCSP.SW
+[36m2019-08-25 16:58:45.590 UTC [viperutil] getKeysRecursively -> DEBU 004[0m Found map[string]interface{} value for peer.BCCSP.SW.FileKeyStore
+[36m2019-08-25 16:58:45.592 UTC [viperutil] unmarshalJSON -> DEBU 005[0m Unmarshal JSON: value cannot be unmarshalled: unexpected end of JSON input
+[36m2019-08-25 16:58:45.594 UTC [viperutil] getKeysRecursively -> DEBU 006[0m Found real value for peer.BCCSP.SW.FileKeyStore.KeyStore setting to string 
+[36m2019-08-25 16:58:45.597 UTC [viperutil] unmarshalJSON -> DEBU 007[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:45.600 UTC [viperutil] getKeysRecursively -> DEBU 008[0m Found real value for peer.BCCSP.SW.Hash setting to string SHA2
+[36m2019-08-25 16:58:45.601 UTC [viperutil] unmarshalJSON -> DEBU 009[0m Unmarshal JSON: value is not a string: 256
+[36m2019-08-25 16:58:45.602 UTC [viperutil] getKeysRecursively -> DEBU 00a[0m Found real value for peer.BCCSP.SW.Security setting to int 256
+[36m2019-08-25 16:58:45.605 UTC [viperutil] getKeysRecursively -> DEBU 00b[0m Found map[string]interface{} value for peer.BCCSP.PKCS11
+[36m2019-08-25 16:58:45.606 UTC [viperutil] unmarshalJSON -> DEBU 00c[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:45.609 UTC [viperutil] getKeysRecursively -> DEBU 00d[0m Found real value for peer.BCCSP.PKCS11.Pin setting to <nil> <nil>
+[36m2019-08-25 16:58:45.621 UTC [viperutil] unmarshalJSON -> DEBU 00e[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:45.621 UTC [viperutil] getKeysRecursively -> DEBU 00f[0m Found real value for peer.BCCSP.PKCS11.Hash setting to <nil> <nil>
+[36m2019-08-25 16:58:45.622 UTC [viperutil] unmarshalJSON -> DEBU 010[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:45.622 UTC [viperutil] getKeysRecursively -> DEBU 011[0m Found real value for peer.BCCSP.PKCS11.Security setting to <nil> <nil>
+[36m2019-08-25 16:58:45.622 UTC [viperutil] getKeysRecursively -> DEBU 012[0m Found map[string]interface{} value for peer.BCCSP.PKCS11.FileKeyStore
+[36m2019-08-25 16:58:45.628 UTC [viperutil] unmarshalJSON -> DEBU 013[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:45.629 UTC [viperutil] getKeysRecursively -> DEBU 014[0m Found real value for peer.BCCSP.PKCS11.FileKeyStore.KeyStore setting to <nil> <nil>
+[36m2019-08-25 16:58:45.629 UTC [viperutil] unmarshalJSON -> DEBU 015[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:45.630 UTC [viperutil] getKeysRecursively -> DEBU 016[0m Found real value for peer.BCCSP.PKCS11.Library setting to <nil> <nil>
+[36m2019-08-25 16:58:45.630 UTC [viperutil] unmarshalJSON -> DEBU 017[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:45.638 UTC [viperutil] getKeysRecursively -> DEBU 018[0m Found real value for peer.BCCSP.PKCS11.Label setting to <nil> <nil>
+[36m2019-08-25 16:58:45.638 UTC [viperutil] unmarshalJSON -> DEBU 019[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:45.638 UTC [viperutil] getKeysRecursively -> DEBU 01a[0m Found real value for peer.BCCSP.Default setting to string SW
+[36m2019-08-25 16:58:45.638 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 01b[0m map[peer.BCCSP:map[SW:map[FileKeyStore:map[KeyStore:] Hash:SHA2 Security:256] PKCS11:map[Hash:<nil> Security:<nil> FileKeyStore:map[KeyStore:<nil>] Library:<nil> Label:<nil> Pin:<nil>] Default:SW]]
+[36m2019-08-25 16:58:45.639 UTC [bccsp_sw] openKeyStore -> DEBU 01c[0m KeyStore opened at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore]...done
+[36m2019-08-25 16:58:45.651 UTC [bccsp] initBCCSP -> DEBU 01d[0m Initialize BCCSP [SW]
+[36m2019-08-25 16:58:45.651 UTC [msp] getPemMaterialFromDir -> DEBU 01e[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts
+[36m2019-08-25 16:58:45.651 UTC [msp] getPemMaterialFromDir -> DEBU 01f[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:45.652 UTC [msp] getPemMaterialFromDir -> DEBU 020[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts
+[36m2019-08-25 16:58:45.652 UTC [msp] getPemMaterialFromDir -> DEBU 021[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts/ca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:45.652 UTC [msp] getPemMaterialFromDir -> DEBU 022[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts
+[36m2019-08-25 16:58:45.653 UTC [msp] getPemMaterialFromDir -> DEBU 023[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:45.655 UTC [msp] getPemMaterialFromDir -> DEBU 024[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts
+[36m2019-08-25 16:58:45.655 UTC [msp] getMspConfig -> DEBU 025[0m Intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:45.655 UTC [msp] getPemMaterialFromDir -> DEBU 026[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts
+[36m2019-08-25 16:58:45.656 UTC [msp] getPemMaterialFromDir -> DEBU 027[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts/tlsca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:45.663 UTC [msp] getPemMaterialFromDir -> DEBU 028[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts
+[36m2019-08-25 16:58:45.663 UTC [msp] getMspConfig -> DEBU 029[0m TLS intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:45.663 UTC [msp] getPemMaterialFromDir -> DEBU 02a[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls
+[36m2019-08-25 16:58:45.664 UTC [msp] getMspConfig -> DEBU 02b[0m crls folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls: no such file or directory]
+[36m2019-08-25 16:58:45.664 UTC [msp] getMspConfig -> DEBU 02c[0m MSP configuration file not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml]: [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml: no such file or directory]
+[36m2019-08-25 16:58:45.664 UTC [msp] newBccspMsp -> DEBU 02d[0m Creating BCCSP-based MSP instance
+[36m2019-08-25 16:58:45.664 UTC [msp] New -> DEBU 02e[0m Creating Cache-MSP instance
+[36m2019-08-25 16:58:45.665 UTC [msp] loadLocaMSP -> DEBU 02f[0m Created new local MSP
+[36m2019-08-25 16:58:45.665 UTC [msp] Setup -> DEBU 030[0m Setting up MSP instance org1MSP
+[36m2019-08-25 16:58:45.666 UTC [msp.identity] newIdentity -> DEBU 031[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICTjCCAfSgAwIBAgIRAL6BcQTYy2/4oQruVQw5468wCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMS5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+cTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMS
+Y2Eub3JnMS5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYBP
+CN1zfGmZ5sairuwe+zPUv9FifEDAb1677WXJa9u5dox5FmrlZNaoJKbSC0E7zEuW
+sB1eINBPOpzHwCCoR6NtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsG
+AQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCA6gPwd
+mDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQDAgNIADBFAiEA
+mLopicH+GxHydqNhuspW7Xdpd1+wekhKTBHJgfP1iW0CIBBW7+nEIk4akAqWHSCE
+fiEaOMZQpGJGVSWzvpqyrvLv
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:45.666 UTC [msp.identity] newIdentity -> DEBU 032[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:45.808 UTC [msp.identity] newIdentity -> DEBU 033[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:45.809 UTC [bccsp_sw] loadPrivateKey -> DEBU 034[0m Loading private key [825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289] at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore/825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289_sk]...
+[36m2019-08-25 16:58:45.809 UTC [msp.identity] newIdentity -> DEBU 035[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:45.810 UTC [msp] setupSigningIdentity -> DEBU 036[0m Signing identity expires at 2029-08-22 16:51:00 +0000 UTC
+[36m2019-08-25 16:58:45.827 UTC [msp] Validate -> DEBU 037[0m MSP org1MSP validating identity
+[33m2019-08-25 16:58:45.828 UTC [main] SetOrdererEnv -> WARN 038[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:45.828 UTC [msp] GetDefaultSigningIdentity -> DEBU 039[0m Obtaining default signing identity
+[36m2019-08-25 16:58:45.843 UTC [grpc] DialContext -> DEBU 03a[0m parsed scheme: ""
+[36m2019-08-25 16:58:45.843 UTC [grpc] DialContext -> DEBU 03b[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:58:45.843 UTC [grpc] watcher -> DEBU 03c[0m ccResolverWrapper: sending new addresses to cc: [{peer0.org1.hurley.lab:7051 0  <nil>}]
+[36m2019-08-25 16:58:45.843 UTC [grpc] switchBalancer -> DEBU 03d[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:58:45.843 UTC [grpc] HandleSubConnStateChange -> DEBU 03e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000535210, CONNECTING
+[36m2019-08-25 16:58:45.867 UTC [grpc] HandleSubConnStateChange -> DEBU 03f[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000535210, READY
+[34m2019-08-25 16:58:45.867 UTC [channelCmd] InitCmdFactory -> INFO 040[0m Endorser and orderer connections initialized
+[36m2019-08-25 16:58:45.868 UTC [msp.identity] Sign -> DEBU 041[0m Sign: plaintext: 0AB0070A5C08011A0C08C5FC8AEB0510...25454993E9631A080A000A000A000A00 
+[36m2019-08-25 16:58:45.869 UTC [msp.identity] Sign -> DEBU 042[0m Sign: digest: 26E002586DCD7EC718E26D4652E358DEC3A08F8B03D297F44D5E3EDB888AF7E9 
+[34m2019-08-25 16:58:47.571 UTC [channelCmd] executeJoin -> INFO 043[0m Successfully submitted proposal to join channel
+++ echo pass
++ output=pass
++ set +x
+Joining ch1 channel on peer peer0.org2.hurley.lab
+++ docker exec peer0.org2.hurley.lab peer channel join -b /shared/ch1.block
+[33m2019-08-25 16:58:50.480 UTC [main] InitCmd -> WARN 001[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:50.489 UTC [viperutil] getKeysRecursively -> DEBU 002[0m Found map[string]interface{} value for peer.BCCSP
+[36m2019-08-25 16:58:50.494 UTC [viperutil] unmarshalJSON -> DEBU 003[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:50.497 UTC [viperutil] getKeysRecursively -> DEBU 004[0m Found real value for peer.BCCSP.Default setting to string SW
+[36m2019-08-25 16:58:50.502 UTC [viperutil] getKeysRecursively -> DEBU 005[0m Found map[string]interface{} value for peer.BCCSP.SW
+[36m2019-08-25 16:58:50.505 UTC [viperutil] unmarshalJSON -> DEBU 006[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:50.527 UTC [viperutil] getKeysRecursively -> DEBU 007[0m Found real value for peer.BCCSP.SW.Hash setting to string SHA2
+[36m2019-08-25 16:58:50.528 UTC [viperutil] unmarshalJSON -> DEBU 008[0m Unmarshal JSON: value is not a string: 256
+[36m2019-08-25 16:58:50.528 UTC [viperutil] getKeysRecursively -> DEBU 009[0m Found real value for peer.BCCSP.SW.Security setting to int 256
+[36m2019-08-25 16:58:50.528 UTC [viperutil] getKeysRecursively -> DEBU 00a[0m Found map[string]interface{} value for peer.BCCSP.SW.FileKeyStore
+[36m2019-08-25 16:58:50.528 UTC [viperutil] unmarshalJSON -> DEBU 00b[0m Unmarshal JSON: value cannot be unmarshalled: unexpected end of JSON input
+[36m2019-08-25 16:58:50.528 UTC [viperutil] getKeysRecursively -> DEBU 00c[0m Found real value for peer.BCCSP.SW.FileKeyStore.KeyStore setting to string 
+[36m2019-08-25 16:58:50.529 UTC [viperutil] getKeysRecursively -> DEBU 00d[0m Found map[string]interface{} value for peer.BCCSP.PKCS11
+[36m2019-08-25 16:58:50.530 UTC [viperutil] getKeysRecursively -> DEBU 00e[0m Found map[string]interface{} value for peer.BCCSP.PKCS11.FileKeyStore
+[36m2019-08-25 16:58:50.535 UTC [viperutil] unmarshalJSON -> DEBU 00f[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:50.535 UTC [viperutil] getKeysRecursively -> DEBU 010[0m Found real value for peer.BCCSP.PKCS11.FileKeyStore.KeyStore setting to <nil> <nil>
+[36m2019-08-25 16:58:50.536 UTC [viperutil] unmarshalJSON -> DEBU 011[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:50.536 UTC [viperutil] getKeysRecursively -> DEBU 012[0m Found real value for peer.BCCSP.PKCS11.Library setting to <nil> <nil>
+[36m2019-08-25 16:58:50.537 UTC [viperutil] unmarshalJSON -> DEBU 013[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:50.541 UTC [viperutil] getKeysRecursively -> DEBU 014[0m Found real value for peer.BCCSP.PKCS11.Label setting to <nil> <nil>
+[36m2019-08-25 16:58:50.541 UTC [viperutil] unmarshalJSON -> DEBU 015[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:50.542 UTC [viperutil] getKeysRecursively -> DEBU 016[0m Found real value for peer.BCCSP.PKCS11.Pin setting to <nil> <nil>
+[36m2019-08-25 16:58:50.542 UTC [viperutil] unmarshalJSON -> DEBU 017[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:50.542 UTC [viperutil] getKeysRecursively -> DEBU 018[0m Found real value for peer.BCCSP.PKCS11.Hash setting to <nil> <nil>
+[36m2019-08-25 16:58:50.543 UTC [viperutil] unmarshalJSON -> DEBU 019[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:50.555 UTC [viperutil] getKeysRecursively -> DEBU 01a[0m Found real value for peer.BCCSP.PKCS11.Security setting to <nil> <nil>
+[36m2019-08-25 16:58:50.555 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 01b[0m map[peer.BCCSP:map[Default:SW SW:map[Security:256 FileKeyStore:map[KeyStore:] Hash:SHA2] PKCS11:map[FileKeyStore:map[KeyStore:<nil>] Library:<nil> Label:<nil> Pin:<nil> Hash:<nil> Security:<nil>]]]
+[36m2019-08-25 16:58:50.556 UTC [bccsp_sw] openKeyStore -> DEBU 01c[0m KeyStore opened at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/keystore]...done
+[36m2019-08-25 16:58:50.556 UTC [bccsp] initBCCSP -> DEBU 01d[0m Initialize BCCSP [SW]
+[36m2019-08-25 16:58:50.556 UTC [msp] getPemMaterialFromDir -> DEBU 01e[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/signcerts
+[36m2019-08-25 16:58:50.557 UTC [msp] getPemMaterialFromDir -> DEBU 01f[0m Inspecting file /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/signcerts/Admin@org2.hurley.lab-cert.pem
+[36m2019-08-25 16:58:50.574 UTC [msp] getPemMaterialFromDir -> DEBU 020[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/cacerts
+[36m2019-08-25 16:58:50.574 UTC [msp] getPemMaterialFromDir -> DEBU 021[0m Inspecting file /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/cacerts/ca.org2.hurley.lab-cert.pem
+[36m2019-08-25 16:58:50.589 UTC [msp] getPemMaterialFromDir -> DEBU 022[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/admincerts
+[36m2019-08-25 16:58:50.590 UTC [msp] getPemMaterialFromDir -> DEBU 023[0m Inspecting file /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/admincerts/Admin@org2.hurley.lab-cert.pem
+[36m2019-08-25 16:58:50.593 UTC [msp] getPemMaterialFromDir -> DEBU 024[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/intermediatecerts
+[36m2019-08-25 16:58:50.593 UTC [msp] getMspConfig -> DEBU 025[0m Intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/intermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:50.593 UTC [msp] getPemMaterialFromDir -> DEBU 026[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/tlscacerts
+[36m2019-08-25 16:58:50.593 UTC [msp] getPemMaterialFromDir -> DEBU 027[0m Inspecting file /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/tlscacerts/tlsca.org2.hurley.lab-cert.pem
+[36m2019-08-25 16:58:50.596 UTC [msp] getPemMaterialFromDir -> DEBU 028[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/tlsintermediatecerts
+[36m2019-08-25 16:58:50.596 UTC [msp] getMspConfig -> DEBU 029[0m TLS intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/tlsintermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:50.596 UTC [msp] getPemMaterialFromDir -> DEBU 02a[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/crls
+[36m2019-08-25 16:58:50.596 UTC [msp] getMspConfig -> DEBU 02b[0m crls folder not found at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/crls]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/crls: no such file or directory]
+[36m2019-08-25 16:58:50.596 UTC [msp] getMspConfig -> DEBU 02c[0m MSP configuration file not found at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/config.yaml]: [stat /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/config.yaml: no such file or directory]
+[36m2019-08-25 16:58:50.597 UTC [msp] newBccspMsp -> DEBU 02d[0m Creating BCCSP-based MSP instance
+[36m2019-08-25 16:58:50.597 UTC [msp] New -> DEBU 02e[0m Creating Cache-MSP instance
+[36m2019-08-25 16:58:50.597 UTC [msp] loadLocaMSP -> DEBU 02f[0m Created new local MSP
+[36m2019-08-25 16:58:50.598 UTC [msp] Setup -> DEBU 030[0m Setting up MSP instance org2MSP
+[36m2019-08-25 16:58:50.609 UTC [msp.identity] newIdentity -> DEBU 031[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICTTCCAfSgAwIBAgIRAM83GBXudDtBsCw4FHkdAK0wCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzIuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMi5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+cTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xGDAWBgNVBAoTD29yZzIuaHVybGV5LmxhYjEbMBkGA1UEAxMS
+Y2Eub3JnMi5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUL9A
+34qnQqtqWhI2aL/UoQSwhuYJv7rhYa+0JlPdFq9XgeLcVevIZYdVAaN5ufoLAFXE
+8QH78XX6Eor1pzbNtaNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsG
+AQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCDwFaS8
+Qv3zWpoaEINN/pl/66/9zVuhCEY3ExbeEIEQdzAKBggqhkjOPQQDAgNHADBEAiAC
+6rI1oiHwbo+YC1QCEwRDGbTrkNo9KCmElsDIP9T/qQIgacqwh3xXXF3CHcv7+suo
+4k9MqO4Bis8Ykb6G4a3eVR8=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:50.614 UTC [msp.identity] newIdentity -> DEBU 032[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICKDCCAc6gAwIBAgIRANNim8on8jkg/kki2StdyXEwCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzIuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMi5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+azELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xDzANBgNVBAsTBmNsaWVudDEeMBwGA1UEAwwVQWRtaW5Ab3Jn
+Mi5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzToscu2JP0ng
+gcbRZQeRavMGmn7XS7MrlI058Wz4CRI7hTOSmZ2b7XghIBIQxvAjuRRQ7uHn1yDT
+3mx2MElVVqNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwKwYDVR0j
+BCQwIoAg8BWkvEL981qaGhCDTf6Zf+uv/c1boQhGNxMW3hCBEHcwCgYIKoZIzj0E
+AwIDSAAwRQIhAI/j+kFnZYhvzsSG24ftYVI5gQRxBN1WRJy2w3vXATjHAiBrpjhr
+Hv7JU2i5g1pbtdVB3PPqunkFWZGjRuSP9nN49A==
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:50.750 UTC [msp.identity] newIdentity -> DEBU 033[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICKDCCAc6gAwIBAgIRANNim8on8jkg/kki2StdyXEwCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzIuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMi5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+azELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xDzANBgNVBAsTBmNsaWVudDEeMBwGA1UEAwwVQWRtaW5Ab3Jn
+Mi5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzToscu2JP0ng
+gcbRZQeRavMGmn7XS7MrlI058Wz4CRI7hTOSmZ2b7XghIBIQxvAjuRRQ7uHn1yDT
+3mx2MElVVqNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwKwYDVR0j
+BCQwIoAg8BWkvEL981qaGhCDTf6Zf+uv/c1boQhGNxMW3hCBEHcwCgYIKoZIzj0E
+AwIDSAAwRQIhAI/j+kFnZYhvzsSG24ftYVI5gQRxBN1WRJy2w3vXATjHAiBrpjhr
+Hv7JU2i5g1pbtdVB3PPqunkFWZGjRuSP9nN49A==
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:50.751 UTC [bccsp_sw] loadPrivateKey -> DEBU 034[0m Loading private key [db01ac1d238256f32c761b5a6c55add18a9bb461360cdfa09c9ee52a8f7e1600] at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/keystore/db01ac1d238256f32c761b5a6c55add18a9bb461360cdfa09c9ee52a8f7e1600_sk]...
+[36m2019-08-25 16:58:50.756 UTC [msp.identity] newIdentity -> DEBU 035[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICKDCCAc6gAwIBAgIRANNim8on8jkg/kki2StdyXEwCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzIuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMi5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+azELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xDzANBgNVBAsTBmNsaWVudDEeMBwGA1UEAwwVQWRtaW5Ab3Jn
+Mi5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzToscu2JP0ng
+gcbRZQeRavMGmn7XS7MrlI058Wz4CRI7hTOSmZ2b7XghIBIQxvAjuRRQ7uHn1yDT
+3mx2MElVVqNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwKwYDVR0j
+BCQwIoAg8BWkvEL981qaGhCDTf6Zf+uv/c1boQhGNxMW3hCBEHcwCgYIKoZIzj0E
+AwIDSAAwRQIhAI/j+kFnZYhvzsSG24ftYVI5gQRxBN1WRJy2w3vXATjHAiBrpjhr
+Hv7JU2i5g1pbtdVB3PPqunkFWZGjRuSP9nN49A==
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:50.756 UTC [msp] setupSigningIdentity -> DEBU 036[0m Signing identity expires at 2029-08-22 16:51:00 +0000 UTC
+[36m2019-08-25 16:58:50.757 UTC [msp] Validate -> DEBU 037[0m MSP org2MSP validating identity
+[33m2019-08-25 16:58:50.758 UTC [main] SetOrdererEnv -> WARN 038[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:50.758 UTC [msp] GetDefaultSigningIdentity -> DEBU 039[0m Obtaining default signing identity
+[36m2019-08-25 16:58:50.780 UTC [grpc] DialContext -> DEBU 03a[0m parsed scheme: ""
+[36m2019-08-25 16:58:50.780 UTC [grpc] DialContext -> DEBU 03b[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:58:50.780 UTC [grpc] watcher -> DEBU 03c[0m ccResolverWrapper: sending new addresses to cc: [{peer0.org2.hurley.lab:7051 0  <nil>}]
+[36m2019-08-25 16:58:50.780 UTC [grpc] switchBalancer -> DEBU 03d[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:58:50.780 UTC [grpc] HandleSubConnStateChange -> DEBU 03e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000161310, CONNECTING
+[36m2019-08-25 16:58:50.787 UTC [grpc] HandleSubConnStateChange -> DEBU 03f[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000161310, READY
+[34m2019-08-25 16:58:50.788 UTC [channelCmd] InitCmdFactory -> INFO 040[0m Endorser and orderer connections initialized
+[36m2019-08-25 16:58:50.789 UTC [msp.identity] Sign -> DEBU 041[0m Sign: plaintext: 0AB4070A5C08011A0C08CAFC8AEB0510...25454993E9631A080A000A000A000A00 
+[36m2019-08-25 16:58:50.804 UTC [msp.identity] Sign -> DEBU 042[0m Sign: digest: F20336A8414A358ABFE15B96BCB1E5FBD2FAC6C584CE33896F5AE8A3A82A7BA5 
+[34m2019-08-25 16:58:52.008 UTC [channelCmd] executeJoin -> INFO 043[0m Successfully submitted proposal to join channel
+++ echo pass
++ output=pass
++ set +x
+Creating ch1 anchor block in peer peer0.org1.hurley.lab
+[33m2019-08-25 16:58:54.776 UTC [main] InitCmd -> WARN 001[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:54.784 UTC [viperutil] getKeysRecursively -> DEBU 002[0m Found map[string]interface{} value for peer.BCCSP
+[36m2019-08-25 16:58:54.790 UTC [viperutil] unmarshalJSON -> DEBU 003[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:54.797 UTC [viperutil] getKeysRecursively -> DEBU 004[0m Found real value for peer.BCCSP.Default setting to string SW
+[36m2019-08-25 16:58:54.806 UTC [viperutil] getKeysRecursively -> DEBU 005[0m Found map[string]interface{} value for peer.BCCSP.SW
+[36m2019-08-25 16:58:54.806 UTC [viperutil] getKeysRecursively -> DEBU 006[0m Found map[string]interface{} value for peer.BCCSP.SW.FileKeyStore
+[36m2019-08-25 16:58:54.807 UTC [viperutil] unmarshalJSON -> DEBU 007[0m Unmarshal JSON: value cannot be unmarshalled: unexpected end of JSON input
+[36m2019-08-25 16:58:54.807 UTC [viperutil] getKeysRecursively -> DEBU 008[0m Found real value for peer.BCCSP.SW.FileKeyStore.KeyStore setting to string 
+[36m2019-08-25 16:58:54.807 UTC [viperutil] unmarshalJSON -> DEBU 009[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:54.807 UTC [viperutil] getKeysRecursively -> DEBU 00a[0m Found real value for peer.BCCSP.SW.Hash setting to string SHA2
+[36m2019-08-25 16:58:54.823 UTC [viperutil] unmarshalJSON -> DEBU 00b[0m Unmarshal JSON: value is not a string: 256
+[36m2019-08-25 16:58:54.823 UTC [viperutil] getKeysRecursively -> DEBU 00c[0m Found real value for peer.BCCSP.SW.Security setting to int 256
+[36m2019-08-25 16:58:54.824 UTC [viperutil] getKeysRecursively -> DEBU 00d[0m Found map[string]interface{} value for peer.BCCSP.PKCS11
+[36m2019-08-25 16:58:54.824 UTC [viperutil] unmarshalJSON -> DEBU 00e[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:54.825 UTC [viperutil] getKeysRecursively -> DEBU 00f[0m Found real value for peer.BCCSP.PKCS11.Library setting to <nil> <nil>
+[36m2019-08-25 16:58:54.825 UTC [viperutil] unmarshalJSON -> DEBU 010[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:54.825 UTC [viperutil] getKeysRecursively -> DEBU 011[0m Found real value for peer.BCCSP.PKCS11.Label setting to <nil> <nil>
+[36m2019-08-25 16:58:54.826 UTC [viperutil] unmarshalJSON -> DEBU 012[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:54.843 UTC [viperutil] getKeysRecursively -> DEBU 013[0m Found real value for peer.BCCSP.PKCS11.Pin setting to <nil> <nil>
+[36m2019-08-25 16:58:54.844 UTC [viperutil] unmarshalJSON -> DEBU 014[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:54.844 UTC [viperutil] getKeysRecursively -> DEBU 015[0m Found real value for peer.BCCSP.PKCS11.Hash setting to <nil> <nil>
+[36m2019-08-25 16:58:54.845 UTC [viperutil] unmarshalJSON -> DEBU 016[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:54.845 UTC [viperutil] getKeysRecursively -> DEBU 017[0m Found real value for peer.BCCSP.PKCS11.Security setting to <nil> <nil>
+[36m2019-08-25 16:58:54.846 UTC [viperutil] getKeysRecursively -> DEBU 018[0m Found map[string]interface{} value for peer.BCCSP.PKCS11.FileKeyStore
+[36m2019-08-25 16:58:54.846 UTC [viperutil] unmarshalJSON -> DEBU 019[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:54.860 UTC [viperutil] getKeysRecursively -> DEBU 01a[0m Found real value for peer.BCCSP.PKCS11.FileKeyStore.KeyStore setting to <nil> <nil>
+[36m2019-08-25 16:58:54.860 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 01b[0m map[peer.BCCSP:map[Default:SW SW:map[FileKeyStore:map[KeyStore:] Hash:SHA2 Security:256] PKCS11:map[Library:<nil> Label:<nil> Pin:<nil> Hash:<nil> Security:<nil> FileKeyStore:map[KeyStore:<nil>]]]]
+[36m2019-08-25 16:58:54.860 UTC [bccsp_sw] openKeyStore -> DEBU 01c[0m KeyStore opened at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore]...done
+[36m2019-08-25 16:58:54.861 UTC [bccsp] initBCCSP -> DEBU 01d[0m Initialize BCCSP [SW]
+[36m2019-08-25 16:58:54.861 UTC [msp] getPemMaterialFromDir -> DEBU 01e[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts
+[36m2019-08-25 16:58:54.861 UTC [msp] getPemMaterialFromDir -> DEBU 01f[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/signcerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:54.861 UTC [msp] getPemMaterialFromDir -> DEBU 020[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts
+[36m2019-08-25 16:58:54.861 UTC [msp] getPemMaterialFromDir -> DEBU 021[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/cacerts/ca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:54.862 UTC [msp] getPemMaterialFromDir -> DEBU 022[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts
+[36m2019-08-25 16:58:54.862 UTC [msp] getPemMaterialFromDir -> DEBU 023[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/admincerts/Admin@org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:54.862 UTC [msp] getPemMaterialFromDir -> DEBU 024[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts
+[36m2019-08-25 16:58:54.862 UTC [msp] getMspConfig -> DEBU 025[0m Intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/intermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:54.862 UTC [msp] getPemMaterialFromDir -> DEBU 026[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts
+[36m2019-08-25 16:58:54.862 UTC [msp] getPemMaterialFromDir -> DEBU 027[0m Inspecting file /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlscacerts/tlsca.org1.hurley.lab-cert.pem
+[36m2019-08-25 16:58:54.863 UTC [msp] getPemMaterialFromDir -> DEBU 028[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts
+[36m2019-08-25 16:58:54.863 UTC [msp] getMspConfig -> DEBU 029[0m TLS intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/tlsintermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:54.863 UTC [msp] getPemMaterialFromDir -> DEBU 02a[0m Reading directory /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls
+[36m2019-08-25 16:58:54.863 UTC [msp] getMspConfig -> DEBU 02b[0m crls folder not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/crls: no such file or directory]
+[36m2019-08-25 16:58:54.863 UTC [msp] getMspConfig -> DEBU 02c[0m MSP configuration file not found at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml]: [stat /etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/config.yaml: no such file or directory]
+[36m2019-08-25 16:58:54.932 UTC [msp] newBccspMsp -> DEBU 02d[0m Creating BCCSP-based MSP instance
+[36m2019-08-25 16:58:54.932 UTC [msp] New -> DEBU 02e[0m Creating Cache-MSP instance
+[36m2019-08-25 16:58:54.933 UTC [msp] loadLocaMSP -> DEBU 02f[0m Created new local MSP
+[36m2019-08-25 16:58:54.933 UTC [msp] Setup -> DEBU 030[0m Setting up MSP instance org1MSP
+[36m2019-08-25 16:58:54.934 UTC [msp.identity] newIdentity -> DEBU 031[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICTjCCAfSgAwIBAgIRAL6BcQTYy2/4oQruVQw5468wCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMS5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+cTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xGDAWBgNVBAoTD29yZzEuaHVybGV5LmxhYjEbMBkGA1UEAxMS
+Y2Eub3JnMS5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYBP
+CN1zfGmZ5sairuwe+zPUv9FifEDAb1677WXJa9u5dox5FmrlZNaoJKbSC0E7zEuW
+sB1eINBPOpzHwCCoR6NtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsG
+AQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCA6gPwd
+mDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQDAgNIADBFAiEA
+mLopicH+GxHydqNhuspW7Xdpd1+wekhKTBHJgfP1iW0CIBBW7+nEIk4akAqWHSCE
+fiEaOMZQpGJGVSWzvpqyrvLv
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:54.935 UTC [msp.identity] newIdentity -> DEBU 032[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:55.137 UTC [msp.identity] newIdentity -> DEBU 033[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:55.164 UTC [bccsp_sw] loadPrivateKey -> DEBU 034[0m Loading private key [825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289] at [/etc/hyperledger/msp/users/Admin@org1.hurley.lab/msp/keystore/825d6d10d7ad9d64aec6dbd2c07c4b4c46a095b7e94d90ed14ffa957cd57d289_sk]...
+[36m2019-08-25 16:58:55.164 UTC [msp.identity] newIdentity -> DEBU 035[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICJjCCAc2gAwIBAgIQI7zwGUuyMJcnBFtcPfjHuDAKBggqhkjOPQQDAjBxMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEYMBYGA1UEChMPb3JnMS5odXJsZXkubGFiMRswGQYDVQQDExJjYS5v
+cmcxLmh1cmxleS5sYWIwHhcNMTkwODI1MTY1MTAwWhcNMjkwODIyMTY1MTAwWjBr
+MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
+IEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR4wHAYDVQQDDBVBZG1pbkBvcmcx
+Lmh1cmxleS5sYWIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMCX1qxx87TsPb
+uYe8wXgsWWFqwHz2AmJIZ7pm5TmckirXlZRmeYgIurihiAP9fGgIG51mtvYWXs9U
+2sgPWT60o00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNVHSME
+JDAigCA6gPwdmDp/oqK4zmaxIVWpKaAsDGql9cJf3XkWqSjk6TAKBggqhkjOPQQD
+AgNHADBEAiBaMTrAALWVB1TTvl6OXjOsJ0c6dnpsOQJ9P2sO3uuzDQIgYAybkXZL
+aRVbenIObQjttPZyX2HOsRxV4eqlJNmMl4g=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:55.165 UTC [msp] setupSigningIdentity -> DEBU 036[0m Signing identity expires at 2029-08-22 16:51:00 +0000 UTC
+[36m2019-08-25 16:58:55.166 UTC [msp] Validate -> DEBU 037[0m MSP org1MSP validating identity
+[33m2019-08-25 16:58:55.167 UTC [main] SetOrdererEnv -> WARN 038[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:55.167 UTC [msp] GetDefaultSigningIdentity -> DEBU 039[0m Obtaining default signing identity
+[36m2019-08-25 16:58:55.167 UTC [grpc] DialContext -> DEBU 03a[0m parsed scheme: ""
+[36m2019-08-25 16:58:55.167 UTC [grpc] DialContext -> DEBU 03b[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:58:55.167 UTC [grpc] watcher -> DEBU 03c[0m ccResolverWrapper: sending new addresses to cc: [{orderer.hurley.lab:7050 0  <nil>}]
+[36m2019-08-25 16:58:55.167 UTC [grpc] switchBalancer -> DEBU 03d[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:58:55.167 UTC [grpc] HandleSubConnStateChange -> DEBU 03e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000475b60, CONNECTING
+[36m2019-08-25 16:58:55.198 UTC [grpc] HandleSubConnStateChange -> DEBU 03f[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000475b60, READY
+[34m2019-08-25 16:58:55.199 UTC [channelCmd] InitCmdFactory -> INFO 040[0m Endorser and orderer connections initialized
+[36m2019-08-25 16:58:55.221 UTC [msp] GetDefaultSigningIdentity -> DEBU 041[0m Obtaining default signing identity
+[36m2019-08-25 16:58:55.222 UTC [msp] GetDefaultSigningIdentity -> DEBU 042[0m Obtaining default signing identity
+[36m2019-08-25 16:58:55.222 UTC [msp.identity] Sign -> DEBU 043[0m Sign: plaintext: 0AB2060A076F7267314D535012A6062D...2A0641646D696E732A0641646D696E73 
+[36m2019-08-25 16:58:55.222 UTC [msp.identity] Sign -> DEBU 044[0m Sign: digest: 8678BD4284A2C5F8C6387CE6C1C521C339E88AA5EBF45644691E1C2D78459DD1 
+[36m2019-08-25 16:58:55.223 UTC [msp] GetDefaultSigningIdentity -> DEBU 045[0m Obtaining default signing identity
+[36m2019-08-25 16:58:55.232 UTC [msp] GetDefaultSigningIdentity -> DEBU 046[0m Obtaining default signing identity
+[36m2019-08-25 16:58:55.233 UTC [msp.identity] Sign -> DEBU 047[0m Sign: plaintext: 0AE3060A0F08021A0608CFFC8AEB0522...F297D0976B48731B5C5FEAF66E9F3371 
+[36m2019-08-25 16:58:55.233 UTC [msp.identity] Sign -> DEBU 048[0m Sign: digest: 64347496825F3CF9AC61D5BCE837E89C9E05951A2CD3A297828FF0CA41D67C63 
+[36m2019-08-25 16:58:55.233 UTC [grpc] DialContext -> DEBU 049[0m parsed scheme: ""
+[36m2019-08-25 16:58:55.233 UTC [grpc] DialContext -> DEBU 04a[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:58:55.233 UTC [grpc] watcher -> DEBU 04b[0m ccResolverWrapper: sending new addresses to cc: [{orderer.hurley.lab:7050 0  <nil>}]
+[36m2019-08-25 16:58:55.233 UTC [grpc] switchBalancer -> DEBU 04c[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:58:55.234 UTC [grpc] HandleSubConnStateChange -> DEBU 04d[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000124a10, CONNECTING
+[36m2019-08-25 16:58:55.248 UTC [grpc] HandleSubConnStateChange -> DEBU 04e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000124a10, READY
+[34m2019-08-25 16:58:55.390 UTC [channelCmd] update -> INFO 04f[0m Successfully submitted channel update
+Creating ch1 anchor block in peer peer0.org2.hurley.lab
+[33m2019-08-25 16:58:58.747 UTC [main] InitCmd -> WARN 001[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:58.837 UTC [viperutil] getKeysRecursively -> DEBU 002[0m Found map[string]interface{} value for peer.BCCSP
+[36m2019-08-25 16:58:58.851 UTC [viperutil] getKeysRecursively -> DEBU 003[0m Found map[string]interface{} value for peer.BCCSP.PKCS11
+[36m2019-08-25 16:58:58.852 UTC [viperutil] unmarshalJSON -> DEBU 004[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:58.897 UTC [viperutil] getKeysRecursively -> DEBU 005[0m Found real value for peer.BCCSP.PKCS11.Library setting to <nil> <nil>
+[36m2019-08-25 16:58:58.903 UTC [viperutil] unmarshalJSON -> DEBU 006[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:58.918 UTC [viperutil] getKeysRecursively -> DEBU 007[0m Found real value for peer.BCCSP.PKCS11.Label setting to <nil> <nil>
+[36m2019-08-25 16:58:58.970 UTC [viperutil] unmarshalJSON -> DEBU 008[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:58.971 UTC [viperutil] getKeysRecursively -> DEBU 009[0m Found real value for peer.BCCSP.PKCS11.Pin setting to <nil> <nil>
+[36m2019-08-25 16:58:58.999 UTC [viperutil] unmarshalJSON -> DEBU 00a[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:59.000 UTC [viperutil] getKeysRecursively -> DEBU 00b[0m Found real value for peer.BCCSP.PKCS11.Hash setting to <nil> <nil>
+[36m2019-08-25 16:58:59.000 UTC [viperutil] unmarshalJSON -> DEBU 00c[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:59.001 UTC [viperutil] getKeysRecursively -> DEBU 00d[0m Found real value for peer.BCCSP.PKCS11.Security setting to <nil> <nil>
+[36m2019-08-25 16:58:59.045 UTC [viperutil] getKeysRecursively -> DEBU 00e[0m Found map[string]interface{} value for peer.BCCSP.PKCS11.FileKeyStore
+[36m2019-08-25 16:58:59.064 UTC [viperutil] unmarshalJSON -> DEBU 00f[0m Unmarshal JSON: value is not a string: <nil>
+[36m2019-08-25 16:58:59.064 UTC [viperutil] getKeysRecursively -> DEBU 010[0m Found real value for peer.BCCSP.PKCS11.FileKeyStore.KeyStore setting to <nil> <nil>
+[36m2019-08-25 16:58:59.066 UTC [viperutil] unmarshalJSON -> DEBU 011[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:59.080 UTC [viperutil] getKeysRecursively -> DEBU 012[0m Found real value for peer.BCCSP.Default setting to string SW
+[36m2019-08-25 16:58:59.081 UTC [viperutil] getKeysRecursively -> DEBU 013[0m Found map[string]interface{} value for peer.BCCSP.SW
+[36m2019-08-25 16:58:59.081 UTC [viperutil] unmarshalJSON -> DEBU 014[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2019-08-25 16:58:59.081 UTC [viperutil] getKeysRecursively -> DEBU 015[0m Found real value for peer.BCCSP.SW.Hash setting to string SHA2
+[36m2019-08-25 16:58:59.082 UTC [viperutil] unmarshalJSON -> DEBU 016[0m Unmarshal JSON: value is not a string: 256
+[36m2019-08-25 16:58:59.082 UTC [viperutil] getKeysRecursively -> DEBU 017[0m Found real value for peer.BCCSP.SW.Security setting to int 256
+[36m2019-08-25 16:58:59.082 UTC [viperutil] getKeysRecursively -> DEBU 018[0m Found map[string]interface{} value for peer.BCCSP.SW.FileKeyStore
+[36m2019-08-25 16:58:59.082 UTC [viperutil] unmarshalJSON -> DEBU 019[0m Unmarshal JSON: value cannot be unmarshalled: unexpected end of JSON input
+[36m2019-08-25 16:58:59.085 UTC [viperutil] getKeysRecursively -> DEBU 01a[0m Found real value for peer.BCCSP.SW.FileKeyStore.KeyStore setting to string 
+[36m2019-08-25 16:58:59.086 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 01b[0m map[peer.BCCSP:map[SW:map[Hash:SHA2 Security:256 FileKeyStore:map[KeyStore:]] PKCS11:map[Label:<nil> Pin:<nil> Hash:<nil> Security:<nil> FileKeyStore:map[KeyStore:<nil>] Library:<nil>] Default:SW]]
+[36m2019-08-25 16:58:59.086 UTC [bccsp_sw] openKeyStore -> DEBU 01c[0m KeyStore opened at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/keystore]...done
+[36m2019-08-25 16:58:59.097 UTC [bccsp] initBCCSP -> DEBU 01d[0m Initialize BCCSP [SW]
+[36m2019-08-25 16:58:59.097 UTC [msp] getPemMaterialFromDir -> DEBU 01e[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/signcerts
+[36m2019-08-25 16:58:59.098 UTC [msp] getPemMaterialFromDir -> DEBU 01f[0m Inspecting file /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/signcerts/Admin@org2.hurley.lab-cert.pem
+[36m2019-08-25 16:58:59.098 UTC [msp] getPemMaterialFromDir -> DEBU 020[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/cacerts
+[36m2019-08-25 16:58:59.098 UTC [msp] getPemMaterialFromDir -> DEBU 021[0m Inspecting file /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/cacerts/ca.org2.hurley.lab-cert.pem
+[36m2019-08-25 16:58:59.098 UTC [msp] getPemMaterialFromDir -> DEBU 022[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/admincerts
+[36m2019-08-25 16:58:59.099 UTC [msp] getPemMaterialFromDir -> DEBU 023[0m Inspecting file /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/admincerts/Admin@org2.hurley.lab-cert.pem
+[36m2019-08-25 16:58:59.099 UTC [msp] getPemMaterialFromDir -> DEBU 024[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/intermediatecerts
+[36m2019-08-25 16:58:59.104 UTC [msp] getMspConfig -> DEBU 025[0m Intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/intermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:59.141 UTC [msp] getPemMaterialFromDir -> DEBU 026[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/tlscacerts
+[36m2019-08-25 16:58:59.142 UTC [msp] getPemMaterialFromDir -> DEBU 027[0m Inspecting file /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/tlscacerts/tlsca.org2.hurley.lab-cert.pem
+[36m2019-08-25 16:58:59.142 UTC [msp] getPemMaterialFromDir -> DEBU 028[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/tlsintermediatecerts
+[36m2019-08-25 16:58:59.142 UTC [msp] getMspConfig -> DEBU 029[0m TLS intermediate certs folder not found at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/tlsintermediatecerts: no such file or directory]
+[36m2019-08-25 16:58:59.142 UTC [msp] getPemMaterialFromDir -> DEBU 02a[0m Reading directory /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/crls
+[36m2019-08-25 16:58:59.142 UTC [msp] getMspConfig -> DEBU 02b[0m crls folder not found at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/crls]. Skipping. [stat /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/crls: no such file or directory]
+[36m2019-08-25 16:58:59.143 UTC [msp] getMspConfig -> DEBU 02c[0m MSP configuration file not found at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/config.yaml]: [stat /etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/config.yaml: no such file or directory]
+[36m2019-08-25 16:58:59.188 UTC [msp] newBccspMsp -> DEBU 02d[0m Creating BCCSP-based MSP instance
+[36m2019-08-25 16:58:59.188 UTC [msp] New -> DEBU 02e[0m Creating Cache-MSP instance
+[36m2019-08-25 16:58:59.188 UTC [msp] loadLocaMSP -> DEBU 02f[0m Created new local MSP
+[36m2019-08-25 16:58:59.188 UTC [msp] Setup -> DEBU 030[0m Setting up MSP instance org2MSP
+[36m2019-08-25 16:58:59.189 UTC [msp.identity] newIdentity -> DEBU 031[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICTTCCAfSgAwIBAgIRAM83GBXudDtBsCw4FHkdAK0wCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzIuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMi5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+cTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xGDAWBgNVBAoTD29yZzIuaHVybGV5LmxhYjEbMBkGA1UEAxMS
+Y2Eub3JnMi5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUL9A
+34qnQqtqWhI2aL/UoQSwhuYJv7rhYa+0JlPdFq9XgeLcVevIZYdVAaN5ufoLAFXE
+8QH78XX6Eor1pzbNtaNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsG
+AQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCDwFaS8
+Qv3zWpoaEINN/pl/66/9zVuhCEY3ExbeEIEQdzAKBggqhkjOPQQDAgNHADBEAiAC
+6rI1oiHwbo+YC1QCEwRDGbTrkNo9KCmElsDIP9T/qQIgacqwh3xXXF3CHcv7+suo
+4k9MqO4Bis8Ykb6G4a3eVR8=
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:59.195 UTC [msp.identity] newIdentity -> DEBU 032[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICKDCCAc6gAwIBAgIRANNim8on8jkg/kki2StdyXEwCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzIuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMi5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+azELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xDzANBgNVBAsTBmNsaWVudDEeMBwGA1UEAwwVQWRtaW5Ab3Jn
+Mi5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzToscu2JP0ng
+gcbRZQeRavMGmn7XS7MrlI058Wz4CRI7hTOSmZ2b7XghIBIQxvAjuRRQ7uHn1yDT
+3mx2MElVVqNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwKwYDVR0j
+BCQwIoAg8BWkvEL981qaGhCDTf6Zf+uv/c1boQhGNxMW3hCBEHcwCgYIKoZIzj0E
+AwIDSAAwRQIhAI/j+kFnZYhvzsSG24ftYVI5gQRxBN1WRJy2w3vXATjHAiBrpjhr
+Hv7JU2i5g1pbtdVB3PPqunkFWZGjRuSP9nN49A==
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:59.377 UTC [msp.identity] newIdentity -> DEBU 033[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICKDCCAc6gAwIBAgIRANNim8on8jkg/kki2StdyXEwCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzIuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMi5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+azELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xDzANBgNVBAsTBmNsaWVudDEeMBwGA1UEAwwVQWRtaW5Ab3Jn
+Mi5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzToscu2JP0ng
+gcbRZQeRavMGmn7XS7MrlI058Wz4CRI7hTOSmZ2b7XghIBIQxvAjuRRQ7uHn1yDT
+3mx2MElVVqNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwKwYDVR0j
+BCQwIoAg8BWkvEL981qaGhCDTf6Zf+uv/c1boQhGNxMW3hCBEHcwCgYIKoZIzj0E
+AwIDSAAwRQIhAI/j+kFnZYhvzsSG24ftYVI5gQRxBN1WRJy2w3vXATjHAiBrpjhr
+Hv7JU2i5g1pbtdVB3PPqunkFWZGjRuSP9nN49A==
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:59.420 UTC [bccsp_sw] loadPrivateKey -> DEBU 034[0m Loading private key [db01ac1d238256f32c761b5a6c55add18a9bb461360cdfa09c9ee52a8f7e1600] at [/etc/hyperledger/msp/users/Admin@org2.hurley.lab/msp/keystore/db01ac1d238256f32c761b5a6c55add18a9bb461360cdfa09c9ee52a8f7e1600_sk]...
+[36m2019-08-25 16:58:59.429 UTC [msp.identity] newIdentity -> DEBU 035[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICKDCCAc6gAwIBAgIRANNim8on8jkg/kki2StdyXEwCgYIKoZIzj0EAwIwcTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGDAWBgNVBAoTD29yZzIuaHVybGV5LmxhYjEbMBkGA1UEAxMSY2Eu
+b3JnMi5odXJsZXkubGFiMB4XDTE5MDgyNTE2NTEwMFoXDTI5MDgyMjE2NTEwMFow
+azELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xDzANBgNVBAsTBmNsaWVudDEeMBwGA1UEAwwVQWRtaW5Ab3Jn
+Mi5odXJsZXkubGFiMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzToscu2JP0ng
+gcbRZQeRavMGmn7XS7MrlI058Wz4CRI7hTOSmZ2b7XghIBIQxvAjuRRQ7uHn1yDT
+3mx2MElVVqNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwKwYDVR0j
+BCQwIoAg8BWkvEL981qaGhCDTf6Zf+uv/c1boQhGNxMW3hCBEHcwCgYIKoZIzj0E
+AwIDSAAwRQIhAI/j+kFnZYhvzsSG24ftYVI5gQRxBN1WRJy2w3vXATjHAiBrpjhr
+Hv7JU2i5g1pbtdVB3PPqunkFWZGjRuSP9nN49A==
+-----END CERTIFICATE-----
+[36m2019-08-25 16:58:59.430 UTC [msp] setupSigningIdentity -> DEBU 036[0m Signing identity expires at 2029-08-22 16:51:00 +0000 UTC
+[36m2019-08-25 16:58:59.430 UTC [msp] Validate -> DEBU 037[0m MSP org2MSP validating identity
+[33m2019-08-25 16:58:59.451 UTC [main] SetOrdererEnv -> WARN 038[0m CORE_LOGGING_LEVEL is no longer supported, please use the FABRIC_LOGGING_SPEC environment variable
+[36m2019-08-25 16:58:59.465 UTC [msp] GetDefaultSigningIdentity -> DEBU 039[0m Obtaining default signing identity
+[36m2019-08-25 16:58:59.467 UTC [grpc] DialContext -> DEBU 03a[0m parsed scheme: ""
+[36m2019-08-25 16:58:59.467 UTC [grpc] DialContext -> DEBU 03b[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:58:59.467 UTC [grpc] watcher -> DEBU 03c[0m ccResolverWrapper: sending new addresses to cc: [{orderer.hurley.lab:7050 0  <nil>}]
+[36m2019-08-25 16:58:59.467 UTC [grpc] switchBalancer -> DEBU 03d[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:58:59.468 UTC [grpc] HandleSubConnStateChange -> DEBU 03e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0004a3f40, CONNECTING
+[36m2019-08-25 16:58:59.538 UTC [grpc] HandleSubConnStateChange -> DEBU 03f[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0004a3f40, READY
+[34m2019-08-25 16:58:59.539 UTC [channelCmd] InitCmdFactory -> INFO 040[0m Endorser and orderer connections initialized
+[36m2019-08-25 16:58:59.600 UTC [msp] GetDefaultSigningIdentity -> DEBU 041[0m Obtaining default signing identity
+[36m2019-08-25 16:58:59.601 UTC [msp] GetDefaultSigningIdentity -> DEBU 042[0m Obtaining default signing identity
+[36m2019-08-25 16:58:59.601 UTC [msp.identity] Sign -> DEBU 043[0m Sign: plaintext: 0AB6060A076F7267324D535012AA062D...2A0641646D696E732A0641646D696E73 
+[36m2019-08-25 16:58:59.601 UTC [msp.identity] Sign -> DEBU 044[0m Sign: digest: 6F14F4890AF448EA76BDB5FB04EFE3B9D4F4F7A10E14073833BACFFF2E963125 
+[36m2019-08-25 16:58:59.601 UTC [msp] GetDefaultSigningIdentity -> DEBU 045[0m Obtaining default signing identity
+[36m2019-08-25 16:58:59.602 UTC [msp] GetDefaultSigningIdentity -> DEBU 046[0m Obtaining default signing identity
+[36m2019-08-25 16:58:59.602 UTC [msp.identity] Sign -> DEBU 047[0m Sign: plaintext: 0AE7060A0F08021A0608D3FC8AEB0522...09DD4453C8765F55743E1FE139F2CAB6 
+[36m2019-08-25 16:58:59.602 UTC [msp.identity] Sign -> DEBU 048[0m Sign: digest: FE20B08163F478182C4A76975DE469A01D45641B51CCC868A2EF17A10AF37FDC 
+[36m2019-08-25 16:58:59.603 UTC [grpc] DialContext -> DEBU 049[0m parsed scheme: ""
+[36m2019-08-25 16:58:59.604 UTC [grpc] DialContext -> DEBU 04a[0m scheme "" not registered, fallback to default scheme
+[36m2019-08-25 16:58:59.604 UTC [grpc] watcher -> DEBU 04b[0m ccResolverWrapper: sending new addresses to cc: [{orderer.hurley.lab:7050 0  <nil>}]
+[36m2019-08-25 16:58:59.604 UTC [grpc] switchBalancer -> DEBU 04c[0m ClientConn switching balancer to "pick_first"
+[36m2019-08-25 16:58:59.604 UTC [grpc] HandleSubConnStateChange -> DEBU 04d[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0004aadf0, CONNECTING
+[36m2019-08-25 16:58:59.623 UTC [grpc] HandleSubConnStateChange -> DEBU 04e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0004aadf0, READY
+[34m2019-08-25 16:58:59.797 UTC [channelCmd] update -> INFO 04f[0m Successfully submitted channel update
+Registering admin for org1
+Registering admin for org2
+Registering user1 for org1
+Registering user1 for org2
+[hurley] - Ran network restart script
+[hurley] - ************ Success!
+[hurley] - Complete network deployed at /home/blockchain/hyperledger-fabric-network
+[hurley] - Setup:
+        - Organizations: 2
+            * org1
+            * org2
+        - Users per organization: user1 
+            * admin 
+            * user1
+        - Channels deployed: 1
+            * ch1
+        
+[hurley] - You can find the network topology (ports, names) here: /home/blockchain/hyperledger-fabric-network/docker-compose.yaml
+
+------------------------------
+------------------------------
+[OUTPUT OF THE COMMAND: npm run cc:start:debug -- lending]
+
+> bookswapy@0.1.0 cc:start:debug /home/blockchain/bookswapy
+> f() { npm run cc:package -- $1 org1; npm run cc:install:debug $1; }; f "lending"
+
+
+> bookswapy@0.1.0 cc:package /home/blockchain/bookswapy
+> f() { npm run lerna:build; chaincode-manager --update --config ./$2.$1.config.json --output ./chaincode-$1 package; }; f "lending" "org1"
+
+
+> bookswapy@0.1.0 lerna:build /home/blockchain/bookswapy
+> lerna run build
+
+lerna notice cli v3.16.4
+lerna info Executing command in 2 packages: "npm run build"
+lerna info run Ran npm script 'build' in 'participant-cc' in 22.9s:
+
+> participant-cc@0.1.0 build /home/blockchain/bookswapy/packages/participant-cc
+> npm run clean && tsc
+
+
+> participant-cc@0.1.0 clean /home/blockchain/bookswapy/packages/participant-cc
+> rimraf dist client
+
+lerna info run Ran npm script 'build' in 'lending-cc' in 22.8s:
+
+> lending-cc@0.1.0 build /home/blockchain/bookswapy/packages/lending-cc
+> npm run clean && tsc
+
+
+> lending-cc@0.1.0 clean /home/blockchain/bookswapy/packages/lending-cc
+> rimraf dist client
+
+lerna success run Ran npm script 'build' in 2 packages in 45.9s:
+lerna success - lending-cc
+lerna success - participant-cc
+2019-08-25T17:07:16.616Z [31merror[39m [shim:_]                                           Unhandled Rejection reason Error: {INVALID} Failed to read chaincode config file promise Promise {
+  <rejected> Error: {INVALID} Failed to read chaincode config file
+    at Function.Manager.readConfig (/home/blockchain/bookswapy/node_modules/@worldsibu/convector-tool-chaincode-manager/dist/src/manager.js:28:19)
+    at Function.Manager.fromConfig (/home/blockchain/bookswapy/node_modules/@worldsibu/convector-tool-chaincode-manager/dist/src/manager.js:19:30)
+    at Object.<anonymous> (/home/blockchain/bookswapy/node_modules/@worldsibu/convector-tool-chaincode-manager/dist/src/command.js:19:45)
+    at step (/home/blockchain/bookswapy/node_modules/tslib/tslib.js:136:27)
+    at Object.next (/home/blockchain/bookswapy/node_modules/tslib/tslib.js:117:57)
+    at /home/blockchain/bookswapy/node_modules/tslib/tslib.js:110:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/home/blockchain/bookswapy/node_modules/tslib/tslib.js:106:16)
+    at Command.<anonymous> (/home/blockchain/bookswapy/node_modules/@worldsibu/convector-tool-chaincode-manager/dist/src/command.js:14:45)
+    at Command.listener (/home/blockchain/bookswapy/node_modules/commander/index.js:315:8) }  
+
+> bookswapy@0.1.0 cc:install:debug /home/blockchain/bookswapy
+> f() { hurl install $1 node -P ./chaincode-$1 --debug; }; f "lending"
+
+[hurley] - installing smart contract located at /home/blockchain/bookswapy/chaincode-lending
+npm WARN saveError ENOENT: no such file or directory, open '/home/blockchain/bookswapy/chaincode-lending/package.json'
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN enoent ENOENT: no such file or directory, open '/home/blockchain/bookswapy/chaincode-lending/package.json'
+npm WARN chaincode-lending No description
+npm WARN chaincode-lending No repository field.
+npm WARN chaincode-lending No README data
+npm WARN chaincode-lending No license field.
+
+up to date in 0.574s
+Installing Chaincode lending version 1.0 at org1
+[34m2019-08-25 19:07:44.262 CEST [chaincodeCmd] checkChaincodeCmdParams -> INFO 001[0m Using default escc
+[34m2019-08-25 19:07:44.267 CEST [chaincodeCmd] checkChaincodeCmdParams -> INFO 002[0m Using default vscc
+[34m2019-08-25 19:07:44.860 CEST [chaincodeCmd] install -> INFO 003[0m Installed remotely response:<status:200 payload:"OK" > 
+Installed Chaincode lending version 1.0 at org1
+Installing Chaincode lending version 1.0 at org2
+[34m2019-08-25 19:07:46.512 CEST [chaincodeCmd] checkChaincodeCmdParams -> INFO 001[0m Using default escc
+[34m2019-08-25 19:07:46.537 CEST [chaincodeCmd] checkChaincodeCmdParams -> INFO 002[0m Using default vscc
+[34m2019-08-25 19:07:47.019 CEST [chaincodeCmd] install -> INFO 003[0m Installed remotely response:<status:200 payload:"OK" > 
+Installed Chaincode lending version 1.0 at org2
+npm ERR! path /home/blockchain/bookswapy/chaincode-lending/package.json
+npm ERR! code ENOENT
+npm ERR! errno -2
+npm ERR! syscall open
+npm ERR! enoent ENOENT: no such file or directory, open '/home/blockchain/bookswapy/chaincode-lending/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/blockchain/.npm/_logs/2019-08-25T17_07_48_880Z-debug.log
+npm ERR! path /home/blockchain/bookswapy/chaincode-lending/package.json
+npm ERR! code ENOENT
+npm ERR! errno -2
+npm ERR! syscall open
+npm ERR! enoent ENOENT: no such file or directory, open '/home/blockchain/bookswapy/chaincode-lending/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/blockchain/.npm/_logs/2019-08-25T17_07_49_225Z-debug.log
+Instantiating Chaincode at org1 for channel ch1
+It may take a few minutes depending on the chaincode dependencies
+[34m2019-08-25 19:07:57.699 CEST [chaincodeCmd] checkChaincodeCmdParams -> INFO 001[0m Using default escc
+[34m2019-08-25 19:07:57.704 CEST [chaincodeCmd] checkChaincodeCmdParams -> INFO 002[0m Using default vscc
+Error: could not assemble transaction, err proposal response was not successful, error code 500, msg timeout expired while starting chaincode lending:1.0 for transaction
+[hurley] - Found error while running script!
+(node:13180) UnhandledPromiseRejectionWarning: Error: Errors found in script, stopping execution
+    at Object.<anonymous> (/home/blockchain/bookswapy/node_modules/@worldsibu/hurley/dist/utils/sysWrapper.js:116:27)
+    at step (/home/blockchain/bookswapy/node_modules/tslib/tslib.js:136:27)
+    at Object.next (/home/blockchain/bookswapy/node_modules/tslib/tslib.js:117:57)
+    at /home/blockchain/bookswapy/node_modules/tslib/tslib.js:110:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/home/blockchain/bookswapy/node_modules/tslib/tslib.js:106:16)
+    at Object.execContent (/home/blockchain/bookswapy/node_modules/@worldsibu/hurley/dist/utils/sysWrapper.js:112:24)
+    at InstallChaincodeShGenerator.BaseGenerator.run (/home/blockchain/bookswapy/node_modules/@worldsibu/hurley/dist/generators/base.js:18:40)
+    at ChaincodeGenerator.install (/home/blockchain/bookswapy/node_modules/@worldsibu/hurley/dist/generators/chaincodegenerator.js:58:35)
+    at ChaincodeCLI.<anonymous> (/home/blockchain/bookswapy/node_modules/@worldsibu/hurley/dist/cli.js:357:55)
+(node:13180) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+(node:13180) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+
+------------------------------
+------------------------------
+[OUTPUT OF THE COMMAND:uname -a]
+
+Linux antonio-VirtualBox 4.15.0-45-generic #48~16.04.1-Ubuntu SMP Tue Jan 29 18:03:48 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
