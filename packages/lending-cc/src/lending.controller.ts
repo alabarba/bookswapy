@@ -31,6 +31,7 @@ export class LendingController extends ConvectorController {
     let book = new Lending(isbn);
     book.isbn=isbn;
     book.title = title;
+    book.author = author;
     book.publisher = publisher;
     book.genre=genre;
     book.year = year;
