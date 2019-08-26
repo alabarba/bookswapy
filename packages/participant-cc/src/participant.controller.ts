@@ -18,17 +18,37 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
   @Invokable()
   public async register(
     @Param(yup.string())
-    id: string,
+    username: string,
     @Param(yup.string())
-    username: string
-  ) {
+    name: string,
+    @Param(yup.string())
+    surname: string,
+    @Param(yup.string())
+    email: string,
+    @Param(yup.string())
+    city: string,
+    @Param(yup.string())
+    region: string,
+    @Param(yup.string())
+    state: string,
+    @Param(yup.string())
+    role: string,
+    @Param(yup.number())
+    defaultEscrow: number  
+    ) {
     // Retrieve to see if exists
-    const existing = await Participant.getOne(id);
+    const existing = await Participant.getOne(username);
 
     if (!existing || !existing.id) {
       let participant = new Participant();
-      participant.id = id;
-      participant.username = username || id;
+      participant.username = username;
+      participant.name = name;
+      participant.email = email;
+      participant.city = city;
+      participant.region = region;
+      participant.state = state;
+      participant.role = role;
+      participant.defaultEscrow = defaultEscrow;
       participant.msp = this.tx.identity.getMSPID();
       // Create a new identity
       participant.identities = [{

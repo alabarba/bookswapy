@@ -35,4 +35,29 @@ export class Participant extends ConvectorModel<Participant> {
 
   @Validate(yup.array(x509Identities.schema()))
   public identities: Array<FlatConvectorModel<x509Identities>>;
+
+  
+  @Validate(yup.string())
+  public name: string;
+
+  @Validate(yup.string())
+  public surname: string;
+
+  @Validate(yup.string())
+  public email: string;
+
+  @Validate(yup.string())
+  public city: string;
+
+  @Validate(yup.string())
+  public region: string;
+
+  @Validate(yup.string())
+  public state: string;
+  
+  @Validate(yup.string())
+  public role: string;
+  
+  @Validate(yup.number())
+  public defaultEscrow: number;
 }
