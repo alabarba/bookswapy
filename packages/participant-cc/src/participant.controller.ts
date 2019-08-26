@@ -39,8 +39,9 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
     // Retrieve to see if exists
     const existing = await Participant.getOne(username);
 
-    if (!existing || !existing.id) {
+    if (!existing || !existing.username) {
       let participant = new Participant();
+      participant.id = username;
       participant.username = username;
       participant.name = name;
       participant.email = email;

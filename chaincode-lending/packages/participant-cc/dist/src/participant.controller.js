@@ -9,18 +9,25 @@ var ParticipantController = (function (_super) {
     function ParticipantController() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    ParticipantController.prototype.register = function (id, username) {
+    ParticipantController.prototype.register = function (username, name, surname, email, city, region, state, role, defaultEscrow) {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
             var existing, participant;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4, participant_model_1.Participant.getOne(id)];
+                    case 0: return [4, participant_model_1.Participant.getOne(username)];
                     case 1:
                         existing = _a.sent();
-                        if (!(!existing || !existing.id)) return [3, 3];
+                        if (!(!existing || !existing.username)) return [3, 3];
                         participant = new participant_model_1.Participant();
-                        participant.id = id;
-                        participant.username = username || id;
+                        participant.id = username;
+                        participant.username = username;
+                        participant.name = name;
+                        participant.email = email;
+                        participant.city = city;
+                        participant.region = region;
+                        participant.state = state;
+                        participant.role = role;
+                        participant.defaultEscrow = defaultEscrow;
                         participant.msp = this.tx.identity.getMSPID();
                         participant.identities = [{
                                 fingerprint: this.sender,
@@ -98,7 +105,14 @@ var ParticipantController = (function (_super) {
     tslib_1.__decorate([
         convector_core_1.Invokable(),
         tslib_1.__param(0, convector_core_1.Param(yup.string())),
-        tslib_1.__param(1, convector_core_1.Param(yup.string()))
+        tslib_1.__param(1, convector_core_1.Param(yup.string())),
+        tslib_1.__param(2, convector_core_1.Param(yup.string())),
+        tslib_1.__param(3, convector_core_1.Param(yup.string())),
+        tslib_1.__param(4, convector_core_1.Param(yup.string())),
+        tslib_1.__param(5, convector_core_1.Param(yup.string())),
+        tslib_1.__param(6, convector_core_1.Param(yup.string())),
+        tslib_1.__param(7, convector_core_1.Param(yup.string())),
+        tslib_1.__param(8, convector_core_1.Param(yup.number()))
     ], ParticipantController.prototype, "register", null);
     tslib_1.__decorate([
         convector_core_1.Invokable(),

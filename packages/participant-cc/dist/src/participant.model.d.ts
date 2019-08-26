@@ -9,4 +9,12 @@ export declare class Participant extends ConvectorModel<Participant> {
     username: string;
     msp: string;
     identities: Array<FlatConvectorModel<x509Identities>>;
+    name: string;
+    surname: string;
+    email: string;
+    city: string;
+    region: string;
+    state: string;
+    role: string;
+    defaultEscrow: number;
 }

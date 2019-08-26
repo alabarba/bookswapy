@@ -9,13 +9,4 @@ export declare class Lending extends ConvectorModel<Lending> {
     year: string;
     ownerId: string;
     borrowerId: string;
-    userId: string;
-    name: string;
-    surname: string;
-    email: string;
-    city: string;
-    region: string;
-    state: string;
-    role: string;
-    defaultEscrow: number;
 }

@@ -17,8 +17,10 @@ var LendingController = (function (_super) {
                 switch (_a.label) {
                     case 0:
                         book = new lending_model_1.Lending(isbn);
+                        book.id = isbn;
                         book.isbn = isbn;
                         book.title = title;
+                        book.author = author;
                         book.publisher = publisher;
                         book.genre = genre;
                         book.year = year;

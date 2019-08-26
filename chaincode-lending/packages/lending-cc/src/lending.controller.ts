@@ -29,8 +29,10 @@ export class LendingController extends ConvectorController {
     year: string,
   ) {
     let book = new Lending(isbn);
+    book.id = isbn;
     book.isbn=isbn;
     book.title = title;
+    book.author = author;
     book.publisher = publisher;
     book.genre=genre;
     book.year = year;
@@ -95,6 +97,8 @@ export class LendingController extends ConvectorController {
     if (!book || book.isbn) {
       throw new Error(`Book with id ${isbn} does not exist`);
     }
+
+    //book.ownerId should be equal to the username of the owner
     const owner = await Participant.getOne(book.ownerId);
 
     if (!owner || !owner.id || !owner.identities) {

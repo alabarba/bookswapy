@@ -46,6 +46,30 @@ var Participant = (function (_super) {
     tslib_1.__decorate([
         convector_core_1.Validate(yup.array(x509Identities.schema()))
     ], Participant.prototype, "identities", void 0);
+    tslib_1.__decorate([
+        convector_core_1.Validate(yup.string())
+    ], Participant.prototype, "name", void 0);
+    tslib_1.__decorate([
+        convector_core_1.Validate(yup.string())
+    ], Participant.prototype, "surname", void 0);
+    tslib_1.__decorate([
+        convector_core_1.Validate(yup.string())
+    ], Participant.prototype, "email", void 0);
+    tslib_1.__decorate([
+        convector_core_1.Validate(yup.string())
+    ], Participant.prototype, "city", void 0);
+    tslib_1.__decorate([
+        convector_core_1.Validate(yup.string())
+    ], Participant.prototype, "region", void 0);
+    tslib_1.__decorate([
+        convector_core_1.Validate(yup.string())
+    ], Participant.prototype, "state", void 0);
+    tslib_1.__decorate([
+        convector_core_1.Validate(yup.string())
+    ], Participant.prototype, "role", void 0);
+    tslib_1.__decorate([
+        convector_core_1.Validate(yup.number())
+    ], Participant.prototype, "defaultEscrow", void 0);
     return Participant;
 }(convector_core_1.ConvectorModel));
 exports.Participant = Participant;

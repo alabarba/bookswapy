@@ -39,34 +39,6 @@ var Lending = (function (_super) {
     tslib_1.__decorate([
         convector_core_model_1.Validate(yup.string().nullable())
     ], Lending.prototype, "borrowerId", void 0);
-    tslib_1.__decorate([
-        convector_core_model_1.Required(),
-        convector_core_model_1.Validate(yup.string())
-    ], Lending.prototype, "userId", void 0);
-    tslib_1.__decorate([
-        convector_core_model_1.Validate(yup.string())
-    ], Lending.prototype, "name", void 0);
-    tslib_1.__decorate([
-        convector_core_model_1.Validate(yup.string())
-    ], Lending.prototype, "surname", void 0);
-    tslib_1.__decorate([
-        convector_core_model_1.Validate(yup.string())
-    ], Lending.prototype, "email", void 0);
-    tslib_1.__decorate([
-        convector_core_model_1.Validate(yup.string())
-    ], Lending.prototype, "city", void 0);
-    tslib_1.__decorate([
-        convector_core_model_1.Validate(yup.string())
-    ], Lending.prototype, "region", void 0);
-    tslib_1.__decorate([
-        convector_core_model_1.Validate(yup.string())
-    ], Lending.prototype, "state", void 0);
-    tslib_1.__decorate([
-        convector_core_model_1.Validate(yup.string())
-    ], Lending.prototype, "role", void 0);
-    tslib_1.__decorate([
-        convector_core_model_1.Validate(yup.number())
-    ], Lending.prototype, "defaultEscrow", void 0);
     return Lending;
 }(convector_core_model_1.ConvectorModel));
 exports.Lending = Lending;
