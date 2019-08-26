@@ -9,6 +9,11 @@
   "//**INSIDE-DOCKER**//networkProfile": "/config/network-profiles/org1.network-profile.inside-docker.yaml",
   "controllers": [
     {
+      "name": "participant-cc",
+      "version": "file:./packages/participant-cc",
+      "controller": "ParticipantController"
+    },
+    {
       "name": "lending-cc",
       "version": "file:./packages/lending-cc",
       "controller": "LendingController"
