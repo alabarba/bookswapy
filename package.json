@@ -8,7 +8,7 @@
   "scripts": {
     "install": "npm-run-all -s lerna:install",
     "build": "node ./update-paths.js",
-    "env:restart": "hurl new",
+    "env:restart": "hurl new -o 1 -u 10 -c 1",
     "test": "npm-run-all -s lerna:test",
     "env:clean": "hurl clean",
     "cc:start": "f() { npm run cc:package -- $1 org1; npm run cc:install $1; }; f",
