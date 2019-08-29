@@ -82,6 +82,10 @@ export class LendingController extends ConvectorController {
       throw new Error('Referenced owner participant does not exist in the ledger');
     }
 
+    if (book.status != bookStatusEnum.AVAILABLE){
+      throw new Error(`The status of the book is ${book.status} so the book cannot be updated`); 
+    }
+
     const ownerCurrentIdentity = owner.identities.filter(identity => identity.status === true)[0];
     if (ownerCurrentIdentity.fingerprint === this.sender) {
       console.log('Identity can update book');
