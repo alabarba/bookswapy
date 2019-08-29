@@ -178,7 +178,7 @@ export class LendingController extends ConvectorController {
       book.status = bookStatusEnum.LENT;
       await book.save();
       let transaction= new Transaction(book.id);
-      transaction.id=book.id;
+      transaction.id="t" + book.id;
       transaction.date=new Date();
       transaction.date.getDate;
       transaction.arbitrator=arbitrator;
