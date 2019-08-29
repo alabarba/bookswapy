@@ -6,7 +6,7 @@ import {
   Param
 } from '@worldsibu/convector-core-controller';
 
-import { Lending } from './lending.model';
+import { Book } from './lending.model';
 import { Participant } from 'participant-cc';
 
 var bookStatusEnum = {
@@ -39,7 +39,7 @@ export class LendingController extends ConvectorController {
     @Param(yup.string())
     year: string,
   ) {
-    let book = new Lending(isbn);
+    let book = new Book(isbn);
     book.id = isbn;
     book.status = bookStatusEnum.AVAILABLE;
     book.isbn=isbn;
@@ -68,7 +68,7 @@ export class LendingController extends ConvectorController {
     @Param(yup.string())
     year: string,
   ) {
-    let book = await Lending.getOne(isbn);
+    let book = await Book.getOne(isbn);
     console.log('Book:');
     console.log(book);
     if (!book || !book.isbn) {
@@ -107,7 +107,7 @@ export class LendingController extends ConvectorController {
     @Param(yup.string())
     isbn: string,
   ) {
-    let book = await Lending.getOne(isbn);
+    let book = await Book.getOne(isbn);
     console.log('Book:');
     console.log(book);
     if (!book || !book.isbn) {
@@ -144,7 +144,7 @@ export class LendingController extends ConvectorController {
     @Param(yup.string())
     borrowerId: string,
   ){
-    let book = await Lending.getOne(isbn);
+    let book = await Book.getOne(isbn);
     
     if (!book || !book.isbn) {
       throw new Error(`Book with id ${isbn} does not exist`);
@@ -176,7 +176,7 @@ export class LendingController extends ConvectorController {
     @Param(yup.string())
     isbn: string,
   ){
-    let book = await Lending.getOne(isbn);
+    let book = await Book.getOne(isbn);
     
     if (!book || !book.isbn) {
       throw new Error(`Book with id ${isbn} does not exist`);
@@ -207,10 +207,10 @@ export class LendingController extends ConvectorController {
 
 
   @Invokable()
-  public async get(
+  public async getBook(
     @Param(yup.string())
     id: string
   ) {
-    return await Lending.getOne(id);
+    return await Book.getOne(id);
   }
 }

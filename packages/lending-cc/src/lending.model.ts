@@ -7,7 +7,7 @@ import {
   Validate
 } from '@worldsibu/convector-core-model';
 
-export class Lending extends ConvectorModel<Lending> {
+export class Book extends ConvectorModel<Book> {
   @ReadOnly()
   @Required()
   public readonly type = 'io.worldsibu.lending';
@@ -33,7 +33,6 @@ export class Lending extends ConvectorModel<Lending> {
   @Validate(yup.string().nullable())
   public borrowerId: string;
   
-
   
 
 }
