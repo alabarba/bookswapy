@@ -32,7 +32,28 @@ export class Book extends ConvectorModel<Book> {
   public ownerId: string;
   @Validate(yup.string().nullable())
   public borrowerId: string;
+}
   
+  export class Transaction extends ConvectorModel<Transaction> {
+    @ReadOnly()
+    @Required()
+    public readonly type = 'io.worldsibu.lending';
   
+    // Book (asset) definition 
+    @Required()
+    @Validate(yup.string())
+    public id: string;
+    @Validate(yup.number())
+    public escrow: number;
+    @Validate(yup.string())
+    public arbitrator: string;
+    @Validate(yup.date())
+    public date: Date;
+    @Validate(yup.string())
+    public isbn: string;
+    @Validate(yup.string())
+    public genre: string;
+    @Validate(yup.date())
+    public deadline: Date;
 
 }
