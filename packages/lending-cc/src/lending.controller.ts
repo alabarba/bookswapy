@@ -135,7 +135,7 @@ export class LendingController extends ConvectorController {
     const borrower = await Participant.getOne(book.borrowerId);
 
     if (!borrower || !borrower.id || !borrower.identities) {
-      throw new Error('Referenced owner participant does not exist in the ledger');
+      throw new Error('Referenced borrower participant does not exist in the ledger');
     }
 
     const borrowerCurrentIdentity = borrower.identities.filter(identity => identity.status === true)[0];
