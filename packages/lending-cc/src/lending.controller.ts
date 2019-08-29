@@ -110,7 +110,7 @@ export class LendingController extends ConvectorController {
       book.borrowerId = borrowerId;
       await book.save();
     } else {
-      throw new Error(`Identity ${this.sender} is not allowed to update book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
+      throw new Error(`Identity ${this.sender} is not allowed to transfer book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
     }
   }
 
