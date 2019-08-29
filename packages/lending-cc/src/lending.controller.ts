@@ -11,6 +11,16 @@ import { Participant } from 'participant-cc';
 
 @Controller('lending')
 export class LendingController extends ConvectorController {
+
+  var bookStatusEnum = {
+    AVAILABLE: 1,
+    LENT: 2,
+    DISPUTE: 3,
+    REQUESTED: 4,
+    WAITING_RESTITUTION_CONFIRMATION: 5,
+    DELETED: 6,
+  };
+
   @Invokable()
   public async createBook(
     @Param(yup.string())
@@ -30,6 +40,7 @@ export class LendingController extends ConvectorController {
   ) {
     let book = new Lending(isbn);
     book.id = isbn;
+    book.status = bookStatusEnum.AVAILABLE;
     book.isbn=isbn;
     book.title = title;
     book.author = author;
@@ -74,6 +85,7 @@ export class LendingController extends ConvectorController {
     if (ownerCurrentIdentity.fingerprint === this.sender) {
       console.log('Identity can update book');
       book.isbn=isbn;
+      book.status = bookStatusEnum.LENT;
       book.title = title;
       book.author=author;
       book.publisher = publisher;
@@ -104,10 +116,14 @@ export class LendingController extends ConvectorController {
       throw new Error('Referenced owner participant does not exist in the ledger');
     }
 
+    if (book.status != bookStatusEnum.AVAILABLE){
+      throw new Error(`The status of the book is ${book.status} so the book cannot be deleted`); 
+    }
+
     const ownerCurrentIdentity = owner.identities.filter(identity => identity.status === true)[0];
     if (ownerCurrentIdentity.fingerprint === this.sender) {
       console.log('Identity can delete book');
-      book=null;
+      book.status = bookStatusEnum.DELETED;
       console.log('Book deleted');
     } else {
       throw new Error(`Identity ${this.sender} is not allowed to delete book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
@@ -133,6 +149,10 @@ export class LendingController extends ConvectorController {
 
     if (!owner || !owner.id || !owner.identities) {
       throw new Error('Referenced owner participant does not exist in the ledger');
+    }
+    
+    if (book.status != bookStatusEnum.AVAILABLE){
+      throw new Error(`The status of the book is ${book.status} so the book cannot be lent`); 
     }
 
     const ownerCurrentIdentity = owner.identities.filter(identity => identity.status === true)[0];
