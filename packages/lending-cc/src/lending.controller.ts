@@ -129,12 +129,11 @@ export class LendingController extends ConvectorController {
     if (ownerCurrentIdentity.fingerprint === this.sender) {
       console.log('Identity can delete book');
       book.status = bookStatusEnum.DELETED;
+      await book.save();
       console.log('Book deleted');
-      console.log(book.status);
     } else {
       throw new Error(`Identity ${this.sender} is not allowed to delete book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
     }
-    console.log(book.status);
   }
 
 
