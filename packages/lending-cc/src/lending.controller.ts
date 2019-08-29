@@ -159,6 +159,7 @@ export class LendingController extends ConvectorController {
     const ownerCurrentIdentity = owner.identities.filter(identity => identity.status === true)[0];
     if (ownerCurrentIdentity.fingerprint === this.sender) {
       book.borrowerId = borrowerId;
+      book.status = bookStatusEnum.LENT;
       await book.save();
     } else {
       throw new Error(`Identity ${this.sender} is not allowed to transfer book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
@@ -192,6 +193,7 @@ export class LendingController extends ConvectorController {
     const borrowerCurrentIdentity = borrower.identities.filter(identity => identity.status === true)[0];
     if (borrowerCurrentIdentity.fingerprint === this.sender) {
       book.borrowerId = null;
+      book.status = bookStatusEnum.AVAILABLE;
       await book.save();
     } else {
       throw new Error(`Identity ${this.sender} is not allowed to return the book just ${borrower.username} ${borrowerCurrentIdentity.fingerprint} can`);
