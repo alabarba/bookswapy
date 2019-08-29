@@ -42,7 +42,7 @@ export class LendingController extends ConvectorController {
   }
 
   @Invokable()
-  public async update(
+  public async updateBook(
     @Param(yup.string())
     isbn: string,
     @Param(yup.string())
@@ -86,7 +86,7 @@ export class LendingController extends ConvectorController {
   }
 
   @Invokable()
-  public async transferBook(
+  public async lendBook(
     @Param(yup.string())
     isbn: string,
     @Param(yup.string())
