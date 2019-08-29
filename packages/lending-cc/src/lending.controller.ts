@@ -6,7 +6,7 @@ import {
   Param
 } from '@worldsibu/convector-core-controller';
 
-import { Book } from './lending.model';
+import { Book, Transaction } from './lending.model';
 import { Participant } from 'participant-cc';
 
 var bookStatusEnum = {
@@ -16,8 +16,13 @@ var bookStatusEnum = {
   REQUESTED: "requested",
   DELETED: "deleted",
   WAITING_RESTITUTION_CONFIRMATION: "waiting restitution confirmation",
+  LOST: "lost",
 };
 Object.freeze(bookStatusEnum)
+
+
+
+
 
 @Controller('lending')
 export class LendingController extends ConvectorController {
@@ -143,6 +148,12 @@ export class LendingController extends ConvectorController {
     isbn: string,
     @Param(yup.string())
     borrowerId: string,
+    @Param(yup.string())
+    arbitrator: string,
+    @Param(yup.number())
+    escrow: number,
+    @Param(yup.number())
+    lendingDuration: number,
   ){
     let book = await Book.getOne(isbn);
     
@@ -166,6 +177,14 @@ export class LendingController extends ConvectorController {
       book.borrowerId = borrowerId;
       book.status = bookStatusEnum.LENT;
       await book.save();
+      var transaction= new Transaction();
+      transaction.id=book.id;
+      transaction.date=new Date();
+      transaction.date.getDate;
+      transaction.arbitrator=arbitrator;
+      transaction.escrow=escrow;
+      transaction.isbn=isbn;
+      transaction.deadline=new Date(transaction.deadline.setMonth(transaction.date.getMonth()+ lendingDuration));
     } else {
       throw new Error(`Identity ${this.sender} is not allowed to transfer book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
     }

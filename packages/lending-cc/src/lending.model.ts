@@ -51,8 +51,6 @@ export class Book extends ConvectorModel<Book> {
     public date: Date;
     @Validate(yup.string())
     public isbn: string;
-    @Validate(yup.string())
-    public genre: string;
     @Validate(yup.date())
     public deadline: Date;
 
