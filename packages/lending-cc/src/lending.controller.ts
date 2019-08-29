@@ -184,7 +184,7 @@ export class LendingController extends ConvectorController {
       transaction.arbitrator=arbitrator;
       transaction.escrow=escrow;
       transaction.isbn=isbn;
-      transaction.deadline=new Date(transaction.deadline.setMonth(transaction.date.getMonth()+ lendingDuration));
+      transaction.deadline=new Date(transaction.date.setMonth(transaction.date.getMonth()+ lendingDuration));
     } else {
       throw new Error(`Identity ${this.sender} is not allowed to transfer book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
     }
