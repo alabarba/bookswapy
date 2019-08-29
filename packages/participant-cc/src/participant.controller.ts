@@ -137,7 +137,7 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
     }
 
     console.log(`isAdmin=${isAdmin}`);
-    if (!isAdmin) {
+    if (isAdmin) {
       throw new Error('Unathorized. Requester identity is not an admin');
     }
 
