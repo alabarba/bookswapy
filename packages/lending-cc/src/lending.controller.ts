@@ -86,7 +86,7 @@ export class LendingController extends ConvectorController {
   }
 
   @Invokable()
-  public async transfer(
+  public async transferBook(
     @Param(yup.string())
     isbn: string,
     @Param(yup.string())
@@ -113,6 +113,40 @@ export class LendingController extends ConvectorController {
       throw new Error(`Identity ${this.sender} is not allowed to update book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
     }
   }
+
+  @Invokable()
+  public async returnBook(
+    @Param(yup.string())
+    isbn: string,
+  ){
+    let book = await Lending.getOne(isbn);
+    
+    if (!book || !book.isbn) {
+      throw new Error(`Book with id ${isbn} does not exist`);
+    }
+
+    //book.ownerId should be equal to the username of the owner
+    const owner = await Participant.getOne(book.ownerId);
+
+    if (!owner || !owner.id || !owner.identities) {
+      throw new Error('Referenced owner participant does not exist in the ledger');
+    }
+
+    const borrower = await Participant.getOne(book.borrowerId);
+
+    if (!borrower || !owner.borrowerId || !borrower.identities) {
+      throw new Error('Referenced owner participant does not exist in the ledger');
+    }
+
+    const borrowerCurrentIdentity = borrower.identities.filter(identity => identity.status === true)[0];
+    if (borrowerCurrentIdentity.fingerprint === this.sender) {
+      book.borrowerId = null;
+      await book.save();
+    } else {
+      throw new Error(`Identity ${this.sender} is not allowed to return the book just ${borrower.username} ${borrowerCurrentIdentity.fingerprint} can`);
+    }
+  }
+
 
   @Invokable()
   public async get(
