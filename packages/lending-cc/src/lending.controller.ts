@@ -177,7 +177,7 @@ export class LendingController extends ConvectorController {
       book.borrowerId = borrowerId;
       book.status = bookStatusEnum.LENT;
       await book.save();
-      var transaction= new Transaction();
+      let transaction= new Transaction(book.id);
       transaction.id=book.id;
       transaction.date=new Date();
       transaction.date.getDate;
@@ -185,6 +185,7 @@ export class LendingController extends ConvectorController {
       transaction.escrow=escrow;
       transaction.isbn=isbn;
       transaction.deadline=new Date(transaction.date.setMonth(transaction.date.getMonth()+ lendingDuration));
+      await transaction.save();
     } else {
       throw new Error(`Identity ${this.sender} is not allowed to transfer book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
     }
