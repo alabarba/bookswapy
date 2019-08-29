@@ -16,8 +16,8 @@ export class Lending extends ConvectorModel<Lending> {
   @Required()
   @Validate(yup.string())
   public isbn: string;
-  @Validate(yup.string())
-  public status: string;
+  @Validate(yup.number())
+  public status: number;
   @Validate(yup.string())
   public title: string;
   @Validate(yup.string())
