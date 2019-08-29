@@ -115,7 +115,7 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
     @Param(yup.string())
     operation: string,
     @Param(yup.number())
-    amount: string
+    amount: number
   ) {
     // Check permissions
     let isAdmin = this.tx.identity.getAttributeValue('admin');
@@ -142,15 +142,14 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
     }
 
    if (operation="add"){
-     let account = Participant.getOne(id);
-     account.balance=account.balance + amount;
+     existing.balance=existing.balance + amount;
    }
    if (operation="pay"){
-    let account = Participant.getOne(id);
-      if (account.balance < amount){
+      if (existing.balance < amount){
         throw new Error('Unathorized. User has not enough funds to perform this operation');
       }
-      else {account.balance=account.balance + amount;}
+      else {existing.balance=existing.balance - amount;
+      }
     
   } 
   }
