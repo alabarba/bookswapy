@@ -9,17 +9,18 @@ import {
 import { Lending } from './lending.model';
 import { Participant } from 'participant-cc';
 
+var bookStatusEnum = {
+  AVAILABLE: 1,
+  LENT: 2,
+  DISPUTE: 3,
+  REQUESTED: 4,
+  WAITING_RESTITUTION_CONFIRMATION: 5,
+  DELETED: 6,
+};
+Object.freeze(bookStatusEnum)
+
 @Controller('lending')
 export class LendingController extends ConvectorController {
-
-  var bookStatusEnum = {
-    AVAILABLE: 1,
-    LENT: 2,
-    DISPUTE: 3,
-    REQUESTED: 4,
-    WAITING_RESTITUTION_CONFIRMATION: 5,
-    DELETED: 6,
-  };
 
   @Invokable()
   public async createBook(
