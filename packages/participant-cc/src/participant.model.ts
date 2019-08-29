@@ -43,6 +43,9 @@ export class Participant extends ConvectorModel<Participant> {
   @Validate(yup.string())
   public surname: string;
 
+  @Validate(yup.number())
+  public balance: number;
+
   @Validate(yup.string())
   public email: string;
 

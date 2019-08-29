@@ -44,6 +44,7 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
       participant.id = username;
       participant.username = username;
       participant.name = name;
+      participant.balance=0;
       participant.email = email;
       participant.city = city;
       participant.region = region;
