@@ -107,6 +107,55 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
     });
     await existing.save();
   }
+
+  @Invokable()
+  public async updateBalance(
+    @Param(yup.string())
+    id: string,
+    @Param(yup.string())
+    operation: string,
+    @Param(yup.number())
+    amount: string
+  ) {
+    // Check permissions
+    let isAdmin = this.tx.identity.getAttributeValue('admin');
+    console.log(this.tx.identity);
+    console.log(isAdmin);
+    let requesterMSP = this.tx.identity.getMSPID();
+
+    // Retrieve to see if exists
+    const existing = await Participant.getOne(id);
+    console.log('Existing participant:');
+    console.log(existing);
+    if (!existing || !existing.id) {
+      throw new Error('No identity exists with that ID');
+    }
+
+    console.log(`existing.msp=${existing.msp} requesterMSP=${requesterMSP}`);
+    if (existing.msp != requesterMSP) {
+      throw new Error('Unathorized. MSPs do not match');
+    }
+
+    console.log(`isAdmin=${isAdmin}`);
+    if (!isAdmin) {
+      throw new Error('Unathorized. Requester identity is not an admin');
+    }
+
+   if (operation="add"){
+     let account = Participant.getOne(id);
+     account.balance=account.balance + amount;
+   }
+   if (operation="pay"){
+    let account = Participant.getOne(id);
+      if (account.balance < amount){
+        throw new Error('Unathorized. User has not enough funds to perform this operation');
+      }
+      else {account.balance=account.balance + amount;}
+    
+  } 
+  }
+
+
   @Invokable()
   public async get(
     @Param(yup.string())

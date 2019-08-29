@@ -36,7 +36,6 @@ export class Participant extends ConvectorModel<Participant> {
   @Validate(yup.array(x509Identities.schema()))
   public identities: Array<FlatConvectorModel<x509Identities>>;
 
-  
   @Validate(yup.string())
   public name: string;
 
