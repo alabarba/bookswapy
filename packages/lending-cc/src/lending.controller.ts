@@ -86,6 +86,36 @@ export class LendingController extends ConvectorController {
   }
 
   @Invokable()
+  public async deleteBook(
+    @Param(yup.string())
+    isbn: string,
+  ) {
+    let book = await Lending.getOne(isbn);
+    console.log('Book:');
+    console.log(book);
+    if (!book || !book.isbn) {
+      throw new Error(`Book with isbn ${isbn} does not exist`);
+    }
+    const owner = await Participant.getOne(book.ownerId);
+    console.log('Owner:');
+    console.log(owner);
+
+    if (!owner || !owner.id || !owner.identities) {
+      throw new Error('Referenced owner participant does not exist in the ledger');
+    }
+
+    const ownerCurrentIdentity = owner.identities.filter(identity => identity.status === true)[0];
+    if (ownerCurrentIdentity.fingerprint === this.sender) {
+      console.log('Identity can delete book');
+      book=null;
+      console.log('Book deleted');
+    } else {
+      throw new Error(`Identity ${this.sender} is not allowed to delete book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
+    }
+  }
+
+
+  @Invokable()
   public async lendBook(
     @Param(yup.string())
     isbn: string,
