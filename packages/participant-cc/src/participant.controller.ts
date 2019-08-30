@@ -150,7 +150,7 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
       }
       else {existing.balance=existing.balance - amount;
       }
-    
+    existing.save();
   } 
   }
 
