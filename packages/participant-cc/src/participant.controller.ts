@@ -136,10 +136,10 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
       throw new Error('Unathorized. MSPs do not match');
     }
 
-    console.log(`isAdmin=${isAdmin}`);
+    /*console.log(`isAdmin=${isAdmin}`);
     if (isAdmin) {
       throw new Error('Unathorized. Requester identity is not an admin');
-    }
+    }*/
 
    if (operation="add"){
      existing.balance=existing.balance + amount;
