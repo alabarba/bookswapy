@@ -143,6 +143,7 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
 
    if (operation="add"){
      existing.balance=existing.balance + amount;
+     existing.save();
    }
    if (operation="pay"){
       if (existing.balance < amount){
