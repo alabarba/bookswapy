@@ -141,11 +141,11 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
       throw new Error('Unathorized. Requester identity is not an admin');
     }*/
 
-   if (operation="add"){
+   if (operation=="add"){
      existing.balance=existing.balance + amount;
      existing.save();
    }
-   if (operation="pay"){
+   if (operation=="pay"){
       if (existing.balance < amount){
         throw new Error('Unathorized. User has not enough funds to perform this operation');
       }
