@@ -1,0 +1,40 @@
+#!/bin/bash
+
+
+echo Creating users:
+hurl invoke lending participant_register  alabarba Antonio LaBarba "alabarba@gmail.com" Palermo Sicilia Italia arbitrator 10 -u user1
+hurl invoke lending participant_register  elabarba Elisa LaBarba "elabarba@gmail.com" Palermo Sicilia Italia arbitrator 10 -u user2
+hurl invoke lending participant_register  glabarba Gabriele LaBarba "glabarba@gmail.com" Palermo Sicilia Italia arbitrator 10 -u user3
+hurl invoke lending participant_register  slabarba Stefano LaBarba "slabarba@gmail.com" Palermo Sicilia Italia arbitrator 10 -u user4
+
+echo Creating books:
+hurl invoke lending lending_createBook "alabarba" "IsbnTest1" "TitleTest1" "AuthorTest1" "PublisherTest1" "GenreTest1" "YearTest1" -u user1
+hurl invoke lending lending_createBook "elabarba" "IsbnTest2" "TitleTest2" "AuthorTest2" "PublisherTest2" "GenreTest2" "YearTest2" -u user2
+hurl invoke lending lending_createBook "glabarba" "IsbnTest3" "TitleTest3" "AuthorTest3" "PublisherTest3" "GenreTest3" "YearTest3" -u user3
+hurl invoke lending lending_createBook "slabarba" "IsbnTest4" "TitleTest4" "AuthorTest4" "PublisherTest4" "GenreTest4" "YearTest4" -u user4
+
+echo lending book from user1 to user2
+hurl invoke lending lending_lendBook  "IsbnTest1" elabarba glabarba 10 3 -u user1
+
+echo try to modify lent book should fail
+hurl invoke lending lending_updateBook  "IsbnTest1" "TitleTest1" "AuthorTest1_updated" "PublisherTest1" "GenreTest1_updated" "YearTest1" -u user1
+
+
+echo return lent book 
+hurl invoke lending lending_returnBook  "IsbnTest1" -u user2
+
+echo modify other books
+hurl invoke lending lending_updateBook  "IsbnTest3" "TitleTest3_updated" "AuthorTest3_updated" "PublisherTest3_updated" "GenreTest3" "YearTest3" -u user3
+
+echo delete a book
+hurl invoke lending lending_deleteBook  "IsbnTest2" -u user2
+
+
+echo delete an already lent book should fail
+hurl invoke lending lending_lendBook  "IsbnTest4" elabarba glabarba 10 3 -u user4
+hurl invoke lending lending_deleteBook  "IsbnTest4" -u user4
+
+Change the balance of the user
+hurl invoke lending participant_updateBalance alabarba "add" 23 -u admin 
+hurl invoke lending participant_updateBalance alabarba "pay" 21 -u admin 
+hurl invoke lending participant_updateBalance glabarba "pay" 2 -u admin 
