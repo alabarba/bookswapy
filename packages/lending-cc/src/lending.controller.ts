@@ -45,7 +45,7 @@ export class LendingController extends ConvectorController {
     year: string,
   ) {
 
-    let creator=Participant.getOne(ownerId);
+    let creator=await Participant.getOne(ownerId);
     const creatorCurrentIdentity = creator.identities.filter(identity => identity.status === true)[0];
     if (creatorCurrentIdentity.fingerprint === this.sender) {
 
