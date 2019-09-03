@@ -1,7 +1,7 @@
 # bookswapy
 
 Bookswapy is a decentralized virtual library allowing free exchange of books (both physical books and ebooks) between privates. 
-The project has started in the context of my master thesis at the University of Palermo (Italy).
+The project has started in the context of my master thesis in telecommunication engineering at the University of Palermo (Italy).
 
 Bookswapy should support creation of a unique universal virtual library made by aggregating the books' collections of each user joining the community. 
 Users can then freely exchange books between them while recording each lending/exchange in a blockchain ledger. 
