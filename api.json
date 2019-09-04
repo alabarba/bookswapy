@@ -1,0 +1,50 @@
+[
+    {
+        "function": "register",
+        "controller": "ParticipantController"
+    },
+    {
+        "function": "changeIdentity",
+        "controller": "ParticipantController"
+    },
+    {
+        "function": "updateBalance",
+        "verb": "post",
+        "controller": "ParticipantController"
+    },
+    {
+        "function": "get",
+        "verb": "get",
+        "controller": "ParticipantController"
+    },
+    {
+        "function": "createBook",
+        "verb": "post",
+        "controller": "LendingController"
+    },
+    {
+        "function": "updateBook",
+        "verb": "post",
+        "controller": "LendingController"
+    },
+    {
+        "function": "deleteBook",
+        "verb": "post",
+        "controller": "LendingController"
+    },
+    {
+        "function": "lendBook",
+        "verb": "post",
+        "controller": "LendingController"
+    },
+    {
+        "function": "returnBook",
+        "verb": "post",
+        "controller": "LendingController"
+    },
+    {
+        "function": "getBook",
+        "verb": "get",
+        "controller": "LendingController"
+    }
+]
