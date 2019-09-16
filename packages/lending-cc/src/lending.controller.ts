@@ -47,7 +47,7 @@ export class LendingController extends ConvectorController {
 
     let creator=await Participant.getOne(ownerId);
     const creatorCurrentIdentity = creator.identities.filter(identity => identity.status === true)[0];
-    if (creatorCurrentIdentity.fingerprint === this.sender) {
+    // if (creatorCurrentIdentity.fingerprint === this.sender) {
 
         let book = new Book(isbn);
         book.id = isbn;
@@ -61,10 +61,10 @@ export class LendingController extends ConvectorController {
         book.ownerId = ownerId;
         book.borrowerId=null;
         await book.save();
-    }
-    else {
-    throw new Error(`Identity ${this.sender} is not allowed to update book just ${creator.username} ${creatorCurrentIdentity.fingerprint} can`);
-    }
+    //}
+    //else {
+    //throw new Error(`Identity ${this.sender} is not allowed to create book just ${creator.username} ${creatorCurrentIdentity.fingerprint} can`);
+    //}
   }
 
   @Invokable()
