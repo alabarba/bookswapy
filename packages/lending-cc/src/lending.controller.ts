@@ -2,6 +2,7 @@ import * as yup from 'yup';
 import {
   Controller,
   ConvectorController,
+  ConvectorModel,
   Invokable,
   Param
 } from '@worldsibu/convector-core-controller';
