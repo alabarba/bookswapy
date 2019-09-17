@@ -2,10 +2,17 @@ import * as yup from 'yup';
 import {
   Controller,
   ConvectorController,
-  ConvectorModel,
   Invokable,
   Param
 } from '@worldsibu/convector-core-controller';
+
+import {
+  ConvectorModel,
+  Default,
+  ReadOnly,
+  Required,
+  Validate
+} from '@worldsibu/convector-core-model';
 
 import { Book, Transaction } from './lending.model';
 import { Participant } from 'participant-cc';
