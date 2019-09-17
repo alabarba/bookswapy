@@ -265,14 +265,7 @@ export class LendingController extends ConvectorController {
   ) {
 
     return await Book.query(Book, {
-      'selector': {
-        'attributes': {
-          '$elemMatch': {
-            'id': 'ownerId',
-            'content': ownerId
-          }
-        }
-      }
+      'selector': 'alabarba'
     });
   }
 }
