@@ -242,4 +242,22 @@ export class LendingController extends ConvectorController {
   ) {
     return await Book.getOne(id);
   }
+
+  @Invokable()
+  public async getParticipantBooks(
+    @Param(yup.string())
+    ownerId: string,
+  ) {
+
+    return await Book.query(Book, {
+      'selector': {
+        'attributes': {
+          '$elemMatch': {
+            'id': 'ownerId',
+            'content': ownerId
+          }
+        }
+      }
+    });
+  }
 }
