@@ -264,11 +264,11 @@ export class LendingController extends ConvectorController {
     ownerId: string,
   ) {
 
-    return await Book.query(Book, {
+    return await Lending.query(Lending, {
       'selector': {
         'Book': {
           '$elemMatch': {
-            'id': 'ownerId',
+            'OwnerId': 'ownerId',
             'content': 'alabarba'
           }
         }
