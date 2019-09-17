@@ -244,7 +244,7 @@ export class LendingController extends ConvectorController {
   }
 
   @Invokable()
-  public async getAllBooks(): Promise<FlatConvectorModel<Book>[]> {
+  public async getAllBooks(): Promise<ConvectorModel<Book>[]> {
     return (await Book.getAll('io.worldsibu.lending')).map(lending => lending.toJSON() as any);
   }
 
