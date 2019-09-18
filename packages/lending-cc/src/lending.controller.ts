@@ -113,7 +113,6 @@ export class LendingController extends ConvectorController {
     if (ownerCurrentIdentity.fingerprint === this.sender) { */
       console.log('Identity can update book');
       book.isbn=isbn;
-      book.status = bookStatusEnum.LENT;
       book.title = title;
       book.author=author;
       book.publisher = publisher;
@@ -191,7 +190,7 @@ export class LendingController extends ConvectorController {
     }
 
     const ownerCurrentIdentity = owner.identities.filter(identity => identity.status === true)[0];
-    if (ownerCurrentIdentity.fingerprint === this.sender) {
+    // if (ownerCurrentIdentity.fingerprint === this.sender) {
       book.borrowerId = borrowerId;
       book.status = bookStatusEnum.LENT;
       await book.save();
@@ -204,9 +203,9 @@ export class LendingController extends ConvectorController {
       transaction.isbn=isbn;
       transaction.deadline=new Date(transaction.date.setMonth(transaction.date.getMonth()+ lendingDuration));
       await transaction.save();
-    } else {
+    /* } else {
       throw new Error(`Identity ${this.sender} is not allowed to transfer book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
-    }
+    }*/
   }
 
   @Invokable()
