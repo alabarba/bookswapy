@@ -100,6 +100,7 @@ export class LendingController extends ConvectorController {
     console.log('Owner:');
     console.log(owner);
 
+  
     if (!owner || !owner.id || !owner.identities) {
       throw new Error('Referenced owner participant does not exist in the ledger');
     }
@@ -108,8 +109,8 @@ export class LendingController extends ConvectorController {
       throw new Error(`The status of the book is ${book.status} so the book cannot be updated`); 
     }
 
-    const ownerCurrentIdentity = owner.identities.filter(identity => identity.status === true)[0];
-    if (ownerCurrentIdentity.fingerprint === this.sender) {
+    /* const ownerCurrentIdentity = owner.identities.filter(identity => identity.status === true)[0];
+    if (ownerCurrentIdentity.fingerprint === this.sender) { */
       console.log('Identity can update book');
       book.isbn=isbn;
       book.status = bookStatusEnum.LENT;
@@ -119,9 +120,9 @@ export class LendingController extends ConvectorController {
       book.genre=genre;
       book.year = year;
       await book.save();
-    } else {
+    /*} else {
       throw new Error(`Identity ${this.sender} is not allowed to update book just ${owner.username} ${ownerCurrentIdentity.fingerprint} can`);
-    }
+    }*/
   }
 
   @Invokable()
